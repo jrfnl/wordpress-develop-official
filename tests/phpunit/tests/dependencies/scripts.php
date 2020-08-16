@@ -1424,10 +1424,9 @@ JS;
 	public function test_wp_localize_script_data_formats( $l10n_data, $expected, $warning = false ) {
 		if ( $warning ) {
 			if ( PHP_VERSION_ID < 80000 ) {
-				$this->expectException( 'PHPUnit_Framework_Error_Warning' );
+				$this->expectWarning();
 			} else {
-				// As this exception will only be set on PHP 8 in combination with PHPUnit 7, this will work (for now).
-				$this->expectException( 'Error' );
+				$this->expectError();
 			}
 		}
 
