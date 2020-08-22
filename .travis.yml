@@ -92,7 +92,7 @@ before_script:
 - locale -a
 
 script:
-  - npm run test:php -- --verbose -c phpunit.xml.dist --group ajax
+  - npm run test:php -- --verbose -c phpunit.xml.dist
 # &&
 #    npm run test:php -- --verbose -c phpunit.xml.dist --group ajax &&
 #    npm run test:php -- --verbose -c tests/phpunit/multisite.xml &&
