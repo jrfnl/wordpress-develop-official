@@ -103,4 +103,5 @@ script:
 #    npm run test:php -- -v --group xdebug --exclude-group __fakegroup__
 
 after_success:
+  - docker-compose exec sed 's/toArray()/toArray(), JSON_INVALID_UTF8_SUBSTITUTE/' vendor/php-coveralls/php-coveralls/src/Bundle/CoverallsBundle/Entity/Coveralls.php conf/httpd.conf > vendor/php-coveralls/php-coveralls/src/Bundle/CoverallsBundle/Entity/Coveralls.php.changed && mv vendor/php-coveralls/php-coveralls/src/Bundle/CoverallsBundle/Entity/Coveralls.php.changed vendor/php-coveralls/php-coveralls/src/Bundle/CoverallsBundle/Entity/Coveralls.php
   - docker-compose run -e TRAVIS="${TRAVIS}" -e TRAVIS_JOB_ID="${TRAVIS_JOB_ID}" --rm php composer report-coverage
