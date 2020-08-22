@@ -103,5 +103,4 @@ script:
 #    npm run test:php -- -v --group xdebug --exclude-group __fakegroup__
 
 after_success:
-  - docker-compose run -e TRAVIS="$TRAVIS" -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID"
-  - docker-compose run --rm php composer report-coverage
+  - docker-compose run -e TRAVIS="${TRAVIS}" -e TRAVIS_JOB_ID="${TRAVIS_JOB_ID}" --rm php composer report-coverage
