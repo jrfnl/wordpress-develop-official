@@ -24,6 +24,6 @@
 		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report=summary,source",
 		"lint:errors": "@lint -n",
 		"test": "@php ./vendor/phpunit/phpunit/phpunit",
-		"report-coverage": "./vendor/bin/php-coveralls -v"
+		"report-coverage": "./vendor/bin/php-coveralls -v -x tests/phpunit/build/logs/clover.xml"
 	}
 }
