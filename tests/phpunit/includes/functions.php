@@ -7,12 +7,11 @@ require_once __DIR__ . '/class-basic-object.php';
  * @return double The version number.
  */
 function tests_get_phpunit_version() {
-	if ( class_exists( 'PHPUnit_Runner_Version' ) ) {
-		$version = PHPUnit_Runner_Version::id();
-	} elseif ( class_exists( 'PHPUnit\Runner\Version' ) ) {
+	$version = 0;
+	if ( class_exists( 'PHPUnit\Runner\Version' ) ) {
 		$version = PHPUnit\Runner\Version::id();
-	} else {
-		$version = 0;
+	} elseif ( class_exists( 'PHPUnit_Runner_Version' ) ) {
+		$version = PHPUnit_Runner_Version::id();
 	}
 
 	return $version;
