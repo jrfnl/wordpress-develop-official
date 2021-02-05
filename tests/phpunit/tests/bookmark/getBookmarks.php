@@ -2,6 +2,7 @@
 
 /**
  * @group bookmark
+ * @covers ::get_bookmarks
  */
 class Tests_Bookmark_GetBookmarks extends WP_UnitTestCase {
 	public function test_should_hit_cache() {
