@@ -3,16 +3,6 @@ name: Code Coverage Report
 on:
   # Verify
   push:
-    branches:
-      - master
-      - trunk
-    paths:
-      - '.github/workflows/test-coverage.yml'
-      - 'phpunit.xml.dist'
-      - 'tests/phpunit/multisite.xml'
-  # Once daily at 00:00 UTC.
-  schedule:
-    - cron: '0 0 * * *'
   # Allow manually triggering the workflow.
   workflow_dispatch:
 
@@ -50,7 +40,6 @@ jobs:
   test-coverage-report:
     name: ${{ matrix.multisite && 'Multisite' || 'Single site' }} report
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'WordPress/wordpress-develop' }}
     strategy:
       fail-fast: false
       matrix:
