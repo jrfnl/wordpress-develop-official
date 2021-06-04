@@ -646,7 +646,7 @@ class Tests_Widgets extends WP_UnitTestCase {
 var_dump($widget_content);
 		unregister_widget( $widget );
 
-//		$this->assertContains( 'Test Title', $actual );
+		$this->assertContains( 'Test Title', $widget_content );
 	}
 
 /*
