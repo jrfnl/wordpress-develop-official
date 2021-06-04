@@ -591,6 +591,88 @@ class Tests_Widgets extends WP_UnitTestCase {
 	// @todo Test WP_Widget::display_callback().
 
 	/**
+	 * @ticket 52728
+	 */
+	function test_widget_display_callback_handles_arrayobject() {
+		$widget = new WP_Widget_Text();
+
+		register_widget( $widget );
+/*
+		update_option(
+			$widget->option_name,
+			new ArrayObject(
+				array(
+					2              => array( 'title' => 'Test Title' ),
+					'_multiwidget' => 1,
+					'__i__'        => true,
+				)
+			)
+		);
+*/
+//		$this->expectOutputString( 'Test Title' );
+
+		ob_start();
+		$widget->widget(
+			array(
+				'before_widget' => '<section>',
+				'after_widget'  => "</section>\n",
+				'before_title'  => '<h2>',
+				'after_title'   => "</h2>\n",
+			),
+			new ArrayObject(
+				array(
+					2              => array( 'title' => 'Test Title' ),
+					'_multiwidget' => 1,
+					'__i__'        => true,
+				)
+			)
+		);
+/*
+		the_widget(
+			'WP_Widget_Text',
+			get_option( $widget->option_name ),
+			array(
+				'before_widget' => '<section>',
+				'after_widget'  => "</section>\n",
+				'before_title'  => '<h2>',
+				'after_title'   => "</h2>\n",
+			)
+		);
+*/
+		$widget_content = ob_get_clean();
+//		unregister_widget( 'WP_Widget_Text' );
+
+
+var_dump($widget_content);
+		unregister_widget( $widget );
+
+		$this->assertContains( 'Test Title', $widget_content );
+	}
+
+/*
+		wp_widgets_init();
+		$wp_widget_search = $wp_registered_widgets['search-2']['callback'][0];
+
+		$settings         = $wp_widget_search->get_settings();
+		$overridden_title = 'Unit Tested';
+
+		/*
+		 * Note that if a plugin is filtering $settings to be an ArrayIterator,
+		 * then doing this:
+		 *     $settings[2]['title'] = $overridden_title;
+		 * Will fail with this:
+		 * > Indirect modification of overloaded element of X has no effect.
+		 * So this is why the value must be obtained.
+		 * /
+		$instance          = $settings[2];
+		$instance['title'] = $overridden_title;
+		$settings[2]       = $instance;
+
+		$wp_widget_search->save_settings( $settings );
+
+		$option_value = get_option( $wp_widget_search->option_name );
+*/
+	/**
 	 * @see WP_Widget::is_preview()
 	 */
 	function test_wp_widget_is_preview() {
