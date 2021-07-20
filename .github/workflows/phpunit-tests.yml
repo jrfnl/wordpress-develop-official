@@ -2,14 +2,14 @@ name: PHPUnit Tests
 
 on:
   push:
-    branches:
-      - master
-      - trunk
-      - '3.[7-9]'
-      - '[4-9].[0-9]'
-    tags:
-      - '3.[7-9]*'
-      - '[4-9].[0-9]*'
+#    branches:
+#      - master
+#      - trunk
+#      - '3.[7-9]'
+#      - '[4-9].[0-9]'
+#    tags:
+#      - '3.[7-9]*'
+#      - '[4-9].[0-9]*'
   pull_request:
     branches:
       - master
@@ -18,8 +18,8 @@ on:
       - '[4-9].[0-9]'
   workflow_dispatch:
   # Once weekly On Sundays at 00:00 UTC.
-  schedule:
-    - cron: '0 0 * * 0'
+#  schedule:
+#    - cron: '0 0 * * 0'
 
 # Cancels all previous workflow runs for pull requests that have not completed.
 concurrency:
@@ -63,7 +63,7 @@ jobs:
   test-php:
     name: ${{ matrix.php }}${{ matrix.multisite && ' multisite' || '' }}${{ matrix.split_slow && ' slow tests' || '' }}${{ matrix.memcached && ' with memcached' || '' }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
+ #   if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
     strategy:
       fail-fast: false
       matrix:
