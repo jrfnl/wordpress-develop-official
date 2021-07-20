@@ -53,6 +53,9 @@ class WP_REST_Template_Controller_Test extends WP_Test_REST_Controller_Testcase 
 		$this->assertArrayHasKey( '/wp/v2/templates/(?P<id>[\/\w-]+)', $routes );
 	}
 
+	/**
+	 * @doesNotPerformAssertions
+	 */
 	public function test_context_param() {
 		// TODO: Implement test_context_param() method.
 	}
@@ -187,10 +190,16 @@ class WP_REST_Template_Controller_Test extends WP_Test_REST_Controller_Testcase 
 		$this->assertErrorResponse( 'rest_template_not_found', $response, 404 );
 	}
 
+	/**
+	 * @doesNotPerformAssertions
+	 */
 	public function test_prepare_item() {
 		// TODO: Implement test_prepare_item() method.
 	}
 
+	/**
+	 * @doesNotPerformAssertions
+	 */
 	public function test_get_item_schema() {
 		// TODO: Implement test_get_item_schema() method.
 	}
