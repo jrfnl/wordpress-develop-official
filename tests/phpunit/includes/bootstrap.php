@@ -191,13 +191,11 @@ if ( version_compare( tests_get_phpunit_version(), '6.0', '>=' ) ) {
 	require __DIR__ . '/phpunit6/compat.php';
 }
 
-// Load separate WP_UnitTestCase classes for PHPUnit 7.5+ and older versions.
-if ( version_compare( tests_get_phpunit_version(), '7.5', '>=' ) ) {
-	require __DIR__ . '/phpunit7/testcase.php';
-} else {
-	require __DIR__ . '/testcase.php';
-}
+// Load the PHPUnit Polyfills autoloader.
+require_once __DIR__ . './../../../vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php';
 
+require_once __DIR__ . '/abstract-testcase.php';
+require_once __DIR__ . '/testcase.php';
 require __DIR__ . '/testcase-rest-api.php';
 require __DIR__ . '/testcase-rest-controller.php';
 require __DIR__ . '/testcase-rest-post-type-controller.php';
