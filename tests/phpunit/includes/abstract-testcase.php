@@ -692,7 +692,7 @@ abstract class WP_UnitTestCase_Base extends PHPUnit_Adapter_TestCase {
 	 * @param string $message  Optional. Message to display when the assertion fails.
 	 */
 	public function assertDiscardWhitespace( $expected, $actual, $message = '' ) {
-		$this->assertEquals( preg_replace( '/\s*/', '', $expected ), preg_replace( '/\s*/', '', $actual ), $message );
+		$this->assertSame( preg_replace( '/\s*/', '', $expected ), preg_replace( '/\s*/', '', $actual ), $message );
 	}
 
 	/**
