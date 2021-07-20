@@ -5,7 +5,7 @@
  *
  * @group customize
  */
-class Tests_WP_Customize_Panel extends WP_UnitTestCase {
+class Tests_WP_Customize_Panel extends WP_UnitTestCase_Base {
 
 	/**
 	 * @var WP_Customize_Manager

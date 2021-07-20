@@ -4,7 +4,7 @@
  * @group functions.php
  * @covers ::wp_get_archives
  */
-class Tests_Functions_wpGetArchives extends WP_UnitTestCase {
+class Tests_Functions_wpGetArchives extends WP_UnitTestCase_Base {
 	protected static $post_ids;
 	protected $month_url;
 	protected $year_url;

@@ -5,7 +5,7 @@
  * @group user
  * @group session
  */
-class Tests_User_Session extends WP_UnitTestCase {
+class Tests_User_Session extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

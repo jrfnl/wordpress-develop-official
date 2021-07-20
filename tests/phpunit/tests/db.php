@@ -5,7 +5,7 @@
  *
  * @group wpdb
  */
-class Tests_DB extends WP_UnitTestCase {
+class Tests_DB extends WP_UnitTestCase_Base {
 
 	/**
 	 * Query log

@@ -2,7 +2,7 @@
 /**
  * @group external-http
  */
-class Tests_External_HTTP_Basic extends WP_UnitTestCase {
+class Tests_External_HTTP_Basic extends WP_UnitTestCase_Base {
 
 	/**
 	 * @covers ::wp_remote_get

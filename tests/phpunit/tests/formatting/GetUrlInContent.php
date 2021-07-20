@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_GetUrlInContent extends WP_UnitTestCase {
+class Tests_Formatting_GetUrlInContent extends WP_UnitTestCase_Base {
 
 	/**
 	 * URL Content Data Provider

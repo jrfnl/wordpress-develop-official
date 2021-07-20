@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::_wp_array_get
  */
-class Tests_Functions_wpArrayGet extends WP_UnitTestCase {
+class Tests_Functions_wpArrayGet extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test _wp_array_get() with invalid parameters.

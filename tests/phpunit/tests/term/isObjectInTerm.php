@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_IsObjectInTerm extends WP_UnitTestCase {
+class Tests_IsObjectInTerm extends WP_UnitTestCase_Base {
 	public function test_terms_are_ints() {
 		register_taxonomy( 'wptests_tax', 'post' );
 

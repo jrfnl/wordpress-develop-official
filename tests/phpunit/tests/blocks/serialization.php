@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Serialization extends WP_UnitTestCase {
+class WP_Test_Block_Serialization extends WP_UnitTestCase_Base {
 
 	/**
 	 * @dataProvider data_serialize_identity_from_parsed

@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_EscXml extends WP_UnitTestCase {
+class Tests_Formatting_EscXml extends WP_UnitTestCase_Base {
 	/**
 	 * Test basic escaping
 	 *

@@ -5,7 +5,7 @@
  * @group query
  * @covers ::wp
  */
-class Tests_Functions_WP extends WP_UnitTestCase {
+class Tests_Functions_WP extends WP_UnitTestCase_Base {
 
 	public function test_wp_sets_global_vars() {
 		global $wp, $wp_query, $wp_the_query;

@@ -5,7 +5,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_Query extends WP_UnitTestCase {
+class Tests_Comment_Query extends WP_UnitTestCase_Base {
 	protected static $post_id;
 	protected $comment_id;
 

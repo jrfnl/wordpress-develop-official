@@ -4,7 +4,7 @@
  * @group taxonomy
  * @covers ::category_description
  */
-class Tests_Category_CategoryDescription extends WP_UnitTestCase {
+class Tests_Category_CategoryDescription extends WP_UnitTestCase_Base {
 	public function test_success_query_by_id() {
 		$description = 'Foo';
 		$c           = self::factory()->category->create(

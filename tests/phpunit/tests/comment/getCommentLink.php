@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_GetCommentLink extends WP_UnitTestCase {
+class Tests_Comment_GetCommentLink extends WP_UnitTestCase_Base {
 	protected static $p;
 	protected static $comments = array();
 

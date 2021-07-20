@@ -4,7 +4,7 @@
  * @group taxonomy
  * @covers ::wp_get_object_terms
  */
-class Tests_Term_WpGetObjectTerms extends WP_UnitTestCase {
+class Tests_Term_WpGetObjectTerms extends WP_UnitTestCase_Base {
 	private $taxonomy = 'wptests_tax';
 
 	public function setUp() {

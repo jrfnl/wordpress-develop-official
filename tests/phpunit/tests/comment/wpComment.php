@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Term_WpComment extends WP_UnitTestCase {
+class Tests_Term_WpComment extends WP_UnitTestCase_Base {
 	protected static $comment_id;
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {

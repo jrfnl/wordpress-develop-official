@@ -9,7 +9,7 @@
  * @group date
  * @group datequery
  */
-class Tests_Query_DateQuery extends WP_UnitTestCase {
+class Tests_Query_DateQuery extends WP_UnitTestCase_Base {
 
 	public $q;
 

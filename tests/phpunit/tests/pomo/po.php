@@ -3,7 +3,7 @@
 /**
  * @group pomo
  */
-class Tests_POMO_PO extends WP_UnitTestCase {
+class Tests_POMO_PO extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 		require_once ABSPATH . '/wp-includes/pomo/po.php';

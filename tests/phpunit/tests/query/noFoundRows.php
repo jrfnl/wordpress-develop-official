@@ -3,7 +3,7 @@
 /**
  * @group query
  */
-class Tests_Query_NoFoundRows extends WP_UnitTestCase {
+class Tests_Query_NoFoundRows extends WP_UnitTestCase_Base {
 	public function test_no_found_rows_default() {
 		$q = new WP_Query(
 			array(

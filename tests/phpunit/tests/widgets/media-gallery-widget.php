@@ -11,7 +11,7 @@
  *
  * @group widgets
  */
-class Test_WP_Widget_Media_Gallery extends WP_UnitTestCase {
+class Test_WP_Widget_Media_Gallery extends WP_UnitTestCase_Base {
 
 	/**
 	 * Clean up global scope.

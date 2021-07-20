@@ -3,7 +3,7 @@
 /**
  * @group user
  */
-class Tests_User_CountUsers extends WP_UnitTestCase {
+class Tests_User_CountUsers extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 22993

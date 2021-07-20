@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::size_format
  */
-class Tests_Functions_SizeFormat extends WP_UnitTestCase {
+class Tests_Functions_SizeFormat extends WP_UnitTestCase_Base {
 
 	public function _data_size_format() {
 		return array(

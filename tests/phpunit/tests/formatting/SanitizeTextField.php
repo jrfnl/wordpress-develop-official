@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_SanitizeTextField extends WP_UnitTestCase {
+class Tests_Formatting_SanitizeTextField extends WP_UnitTestCase_Base {
 	function data_sanitize_text_field() {
 		return array(
 			array(

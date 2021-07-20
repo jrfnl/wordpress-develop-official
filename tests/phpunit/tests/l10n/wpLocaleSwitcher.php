@@ -5,7 +5,7 @@
  * @group i18n
  * @ticket 26511
  */
-class Tests_L10n_wpLocaleSwitcher extends WP_UnitTestCase {
+class Tests_L10n_wpLocaleSwitcher extends WP_UnitTestCase_Base {
 	/**
 	 * @var string
 	 */

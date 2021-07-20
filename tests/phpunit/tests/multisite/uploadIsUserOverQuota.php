@@ -10,7 +10,7 @@ if ( is_multisite() ) :
 	 *
 	 * @group multisite
 	 */
-	class Tests_Multisite_Upload_Is_User_Over_Quota extends WP_UnitTestCase {
+	class Tests_Multisite_Upload_Is_User_Over_Quota extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		public function setUp() {

@@ -15,7 +15,7 @@
  *
  * @since 4.9.6
  */
-class Tests_Privacy_wpPrivacyCompletedRequest extends WP_UnitTestCase {
+class Tests_Privacy_wpPrivacyCompletedRequest extends WP_UnitTestCase_Base {
 	/**
 	 * Request ID
 	 *

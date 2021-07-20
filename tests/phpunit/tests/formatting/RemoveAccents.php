@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_RemoveAccents extends WP_UnitTestCase {
+class Tests_Formatting_RemoveAccents extends WP_UnitTestCase_Base {
 	public function test_remove_accents_simple() {
 		$this->assertSame( 'abcdefghijkl', remove_accents( 'abcdefghijkl' ) );
 	}

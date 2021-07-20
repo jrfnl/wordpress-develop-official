@@ -3,7 +3,7 @@
  * @group query
  * @group search
  */
-class Tests_Query_Search extends WP_UnitTestCase {
+class Tests_Query_Search extends WP_UnitTestCase_Base {
 	protected $q;
 	protected $post_type;
 

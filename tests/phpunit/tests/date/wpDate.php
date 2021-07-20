@@ -5,7 +5,7 @@
  * @group datetime
  * @covers ::wp_date
  */
-class Tests_Date_wpDate extends WP_UnitTestCase {
+class Tests_Date_wpDate extends WP_UnitTestCase_Base {
 
 	/** @var WP_Locale */
 	private $wp_locale_original;

@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_SeemsUtf8 extends WP_UnitTestCase {
+class Tests_Formatting_SeemsUtf8 extends WP_UnitTestCase_Base {
 
 	/**
 	 * `seems_utf8` returns true for utf-8 strings, false otherwise.

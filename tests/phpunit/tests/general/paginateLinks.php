@@ -5,7 +5,7 @@
  * @group template
  * @covers ::paginate_links
  */
-class Tests_General_PaginateLinks extends WP_UnitTestCase {
+class Tests_General_PaginateLinks extends WP_UnitTestCase_Base {
 
 	private $i18n_count = 0;
 

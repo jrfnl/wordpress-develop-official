@@ -5,7 +5,7 @@
  * @covers ::excerpt_remove_blocks
  * @ticket 46133
  */
-class Tests_Formatting_ExcerptRemoveBlocks extends WP_UnitTestCase {
+class Tests_Formatting_ExcerptRemoveBlocks extends WP_UnitTestCase_Base {
 
 	public static $post_id;
 

@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_wpAfterInsertPost extends WP_UnitTestCase {
+class Tests_Post_wpAfterInsertPost extends WP_UnitTestCase_Base {
 
 	/**
 	 * Admin user ID.

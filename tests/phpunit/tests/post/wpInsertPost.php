@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_wpInsertPost extends WP_UnitTestCase {
+class Tests_Post_wpInsertPost extends WP_UnitTestCase_Base {
 
 	protected static $user_ids = array(
 		'administrator' => null,

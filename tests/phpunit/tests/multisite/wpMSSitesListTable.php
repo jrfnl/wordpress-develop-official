@@ -6,7 +6,7 @@ if ( is_multisite() ) :
 	 * @group admin
 	 * @group network-admin
 	 */
-	class Tests_WP_MS_Sites_List_Table extends WP_UnitTestCase {
+	class Tests_WP_MS_Sites_List_Table extends WP_UnitTestCase_Base {
 		protected static $site_ids;
 
 		/**

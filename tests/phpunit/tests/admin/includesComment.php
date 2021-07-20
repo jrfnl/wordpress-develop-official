@@ -4,7 +4,7 @@
  * @group admin
  * @group comment
  */
-class Tests_Admin_IncludesComment extends WP_UnitTestCase {
+class Tests_Admin_IncludesComment extends WP_UnitTestCase_Base {
 	/**
 	 * Post ID to add comments to.
 	 *

@@ -3,7 +3,7 @@
 /**
  * @group pomo
  */
-class Tests_POMO_TranslationEntry extends WP_UnitTestCase {
+class Tests_POMO_TranslationEntry extends WP_UnitTestCase_Base {
 
 	function test_create_entry() {
 		// No singular => empty object.

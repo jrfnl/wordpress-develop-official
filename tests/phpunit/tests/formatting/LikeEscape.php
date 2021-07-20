@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_LikeEscape extends WP_UnitTestCase {
+class Tests_Formatting_LikeEscape extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 10041
 	 * @expectedDeprecated like_escape

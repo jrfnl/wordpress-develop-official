@@ -1,6 +1,6 @@
 <?php
 
-abstract class WP_Test_REST_TestCase extends WP_UnitTestCase {
+abstract class WP_Test_REST_TestCase extends WP_UnitTestCase_Base {
 	protected function assertErrorResponse( $code, $response, $status = null ) {
 
 		if ( is_a( $response, 'WP_REST_Response' ) ) {

@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_IsEmail extends WP_UnitTestCase {
+class Tests_Formatting_IsEmail extends WP_UnitTestCase_Base {
 	function test_returns_the_email_address_if_it_is_valid() {
 		$data = array(
 			'bob@example.com',

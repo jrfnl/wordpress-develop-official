@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_GetPostTypeLabels extends WP_UnitTestCase {
+class Tests_Post_GetPostTypeLabels extends WP_UnitTestCase_Base {
 	public function test_returns_an_object() {
 		$this->assertIsObject(
 			get_post_type_labels(

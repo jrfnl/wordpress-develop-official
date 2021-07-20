@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_WP_Blocklist_Check extends WP_UnitTestCase {
+class Tests_WP_Blocklist_Check extends WP_UnitTestCase_Base {
 
 	public function test_should_return_true_when_content_matches_disallowed_keys() {
 		$author       = 'Sting';

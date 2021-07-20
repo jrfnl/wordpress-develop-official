@@ -5,7 +5,7 @@
  *
  * @group query
  */
-class Tests_Query_Vars extends WP_UnitTestCase {
+class Tests_Query_Vars extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 35115

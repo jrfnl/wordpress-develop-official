@@ -5,7 +5,7 @@
  *
  * Testing items that are only testable by grabbing the markup of `comments_template()` from the output buffer.
  */
-class Tests_Comment_CommentsTemplate extends WP_UnitTestCase {
+class Tests_Comment_CommentsTemplate extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 8071

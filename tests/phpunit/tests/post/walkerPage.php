@@ -3,7 +3,7 @@
  * @group post
  * @group walker
  */
-class Tests_Post_Walker_Page extends WP_UnitTestCase {
+class Tests_Post_Walker_Page extends WP_UnitTestCase_Base {
 
 	/**
 	 * @var \Walker_Page The instance of the walker.

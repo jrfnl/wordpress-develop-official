@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_WpHtmlSplit extends WP_UnitTestCase {
+class Tests_Formatting_WpHtmlSplit extends WP_UnitTestCase_Base {
 
 	/**
 	 * Basic functionality goes here.

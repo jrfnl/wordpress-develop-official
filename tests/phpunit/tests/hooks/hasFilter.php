@@ -6,7 +6,7 @@
  * @group hooks
  * @covers WP_Hook::has_filter
  */
-class Tests_Hooks_HasFilter extends WP_UnitTestCase {
+class Tests_Hooks_HasFilter extends WP_UnitTestCase_Base {
 
 	public function test_has_filter_with_function() {
 		$callback      = '__return_null';

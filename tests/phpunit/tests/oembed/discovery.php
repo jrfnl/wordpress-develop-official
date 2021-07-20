@@ -3,7 +3,7 @@
 /**
  * @group oembed
  */
-class Tests_oEmbed_Discovery extends WP_UnitTestCase {
+class Tests_oEmbed_Discovery extends WP_UnitTestCase_Base {
 	function test_add_oembed_discovery_links_non_singular() {
 		$this->assertSame( '', get_echo( 'wp_oembed_add_discovery_links' ) );
 	}

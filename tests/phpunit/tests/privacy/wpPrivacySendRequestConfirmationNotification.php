@@ -16,7 +16,7 @@
  *
  * @since 4.9.8
  */
-class Tests_Privacy_wpPrivacySendRequestConfirmationNotification extends WP_UnitTestCase {
+class Tests_Privacy_wpPrivacySendRequestConfirmationNotification extends WP_UnitTestCase_Base {
 	/**
 	 * Reset the mocked PHPMailer instance before each test method.
 	 *

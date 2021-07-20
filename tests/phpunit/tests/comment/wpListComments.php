@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_WpListComments extends WP_UnitTestCase {
+class Tests_Comment_WpListComments extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 35175
 	 */

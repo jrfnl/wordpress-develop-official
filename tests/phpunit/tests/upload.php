@@ -3,7 +3,7 @@
  * @group upload
  * @group media
  */
-class Tests_Upload extends WP_UnitTestCase {
+class Tests_Upload extends WP_UnitTestCase_Base {
 
 	public $siteurl;
 

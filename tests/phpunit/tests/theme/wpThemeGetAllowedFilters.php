@@ -6,7 +6,7 @@ if ( is_multisite() ) :
 	 * @group themes
 	 * @group multisite
 	 */
-	class Tests_Theme_wpThemeGetAllowedFilters extends WP_UnitTestCase {
+	class Tests_Theme_wpThemeGetAllowedFilters extends WP_UnitTestCase_Base {
 		/**
 		 * @array List of themes allowed before filters are applied.
 		 */

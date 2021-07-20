@@ -15,7 +15,7 @@
  * @group user
  * @covers ::wp_send_user_request
  */
-class Tests_User_WpSendUserRequest extends WP_UnitTestCase {
+class Tests_User_WpSendUserRequest extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test administrator user.

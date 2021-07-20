@@ -4,7 +4,7 @@
  *
  * @group comment
  */
-class Tests_Comment_GetCommentsPagesCount extends WP_UnitTestCase {
+class Tests_Comment_GetCommentsPagesCount extends WP_UnitTestCase_Base {
 	protected $option_page_comments;
 	protected $option_comments_per_page;
 	protected $option_thread_comments;

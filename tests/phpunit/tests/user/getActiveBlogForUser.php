@@ -9,7 +9,7 @@ if ( is_multisite() ) :
 	 * @group ms-user
 	 * @group multisite
 	 */
-	class Tests_Multisite_getActiveBlogForUser extends WP_UnitTestCase {
+	class Tests_Multisite_getActiveBlogForUser extends WP_UnitTestCase_Base {
 		public static $user_id = false;
 
 		public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {

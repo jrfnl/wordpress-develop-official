@@ -3,7 +3,7 @@
 /**
  * @group bookmark
  */
-class Tests_Bookmark_GetBookmarks extends WP_UnitTestCase {
+class Tests_Bookmark_GetBookmarks extends WP_UnitTestCase_Base {
 	public function test_should_hit_cache() {
 		global $wpdb;
 

@@ -11,7 +11,7 @@ if ( is_multisite() ) :
 	 * @group ms-files
 	 * @group multisite
 	 */
-	class Tests_Multisite_MS_Files_Rewriting extends WP_UnitTestCase {
+	class Tests_Multisite_MS_Files_Rewriting extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		function setUp() {

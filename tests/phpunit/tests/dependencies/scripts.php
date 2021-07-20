@@ -9,7 +9,7 @@
  * @covers ::wp_add_inline_script
  * @covers ::wp_set_script_translations
  */
-class Tests_Dependencies_Scripts extends WP_UnitTestCase {
+class Tests_Dependencies_Scripts extends WP_UnitTestCase_Base {
 	protected $old_wp_scripts;
 
 	protected $wp_scripts_print_translations_output;

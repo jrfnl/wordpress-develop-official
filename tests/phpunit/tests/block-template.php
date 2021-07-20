@@ -8,7 +8,7 @@
 /**
  * Tests for the block template loading algorithm.
  */
-class Block_Template_Test extends WP_UnitTestCase {
+class Block_Template_Test extends WP_UnitTestCase_Base {
 	private static $post;
 
 	private static $template_canvas_path = ABSPATH . WPINC . '/template-canvas.php';

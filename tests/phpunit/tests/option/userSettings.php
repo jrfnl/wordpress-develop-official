@@ -1,5 +1,5 @@
 <?php
-class Tests_User_Settings extends WP_UnitTestCase {
+class Tests_User_Settings extends WP_UnitTestCase_Base {
 	protected $user_id;
 
 	function setUp() {

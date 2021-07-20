@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Parser extends WP_UnitTestCase {
+class WP_Test_Block_Parser extends WP_UnitTestCase_Base {
 	/**
 	 * The location of the fixtures to test with.
 	 *

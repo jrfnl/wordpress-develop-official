@@ -5,7 +5,7 @@
  * @group formatting
  * @group redirect
  */
-class Tests_Formatting_Redirect extends WP_UnitTestCase {
+class Tests_Formatting_Redirect extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 		add_filter( 'home_url', array( $this, 'home_url' ) );

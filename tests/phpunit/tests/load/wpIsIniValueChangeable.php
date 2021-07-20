@@ -6,7 +6,7 @@
  * @group load.php
  * @covers ::wp_is_ini_value_changeable
  */
-class Tests_Load_wpIsIniValueChangeable extends WP_UnitTestCase {
+class Tests_Load_wpIsIniValueChangeable extends WP_UnitTestCase_Base {
 
 	/**
 	 * Tests the determining of the changeability of a PHP ini value.

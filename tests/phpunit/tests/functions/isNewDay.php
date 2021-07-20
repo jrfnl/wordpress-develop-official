@@ -7,7 +7,7 @@
  * @group functions.php
  * @covers ::is_new_day
  */
-class Tests_Functions_IsNewDate extends WP_UnitTestCase {
+class Tests_Functions_IsNewDate extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 46627

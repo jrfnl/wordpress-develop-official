@@ -8,7 +8,7 @@
 /**
  * Tests for the Block Template Loader abstraction layer.
  */
-class Block_Template_Utils_Test extends WP_UnitTestCase {
+class Block_Template_Utils_Test extends WP_UnitTestCase_Base {
 	private static $post;
 
 	public static function wpSetUpBeforeClass() {

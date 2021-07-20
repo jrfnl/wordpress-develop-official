@@ -9,7 +9,7 @@
  * @group post
  * @group formatting
  */
-class Tests_Post_Filtering extends WP_UnitTestCase {
+class Tests_Post_Filtering extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 		update_option( 'use_balanceTags', 1 );

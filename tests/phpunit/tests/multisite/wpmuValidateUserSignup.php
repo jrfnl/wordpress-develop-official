@@ -5,7 +5,7 @@ if ( is_multisite() ) :
 	/**
 	 * @group multisite
 	 */
-	class Tests_Multisite_WpmuValidateUserSignup extends WP_UnitTestCase {
+	class Tests_Multisite_WpmuValidateUserSignup extends WP_UnitTestCase_Base {
 		/**
 		 * @dataProvider data_user_name
 		 */

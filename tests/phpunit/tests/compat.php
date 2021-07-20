@@ -4,7 +4,7 @@
  * @group compat
  * @group security-153
  */
-class Tests_Compat extends WP_UnitTestCase {
+class Tests_Compat extends WP_UnitTestCase_Base {
 	function utf8_string_lengths() {
 		return array(
 			// String, character_length, byte_length.

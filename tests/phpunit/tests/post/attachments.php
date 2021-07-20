@@ -5,7 +5,7 @@
  * @group media
  * @group upload
  */
-class Tests_Post_Attachments extends WP_UnitTestCase {
+class Tests_Post_Attachments extends WP_UnitTestCase_Base {
 
 	function tearDown() {
 		// Remove all uploads.

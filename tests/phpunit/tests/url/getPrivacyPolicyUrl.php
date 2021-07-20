@@ -16,7 +16,7 @@
  *
  * @since 4.9.6
  */
-class Tests_Url_GetPrivacyPolicyUrl extends WP_UnitTestCase {
+class Tests_Url_GetPrivacyPolicyUrl extends WP_UnitTestCase_Base {
 	/**
 	 * The ID of the Privacy Policy page.
 	 *

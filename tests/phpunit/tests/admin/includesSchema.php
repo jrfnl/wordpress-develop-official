@@ -3,7 +3,7 @@
 /**
  * @group admin
  */
-class Tests_Admin_Includes_Schema extends WP_UnitTestCase {
+class Tests_Admin_Includes_Schema extends WP_UnitTestCase_Base {
 
 	private static $options;
 	private static $blogmeta;

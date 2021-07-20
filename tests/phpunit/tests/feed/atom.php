@@ -8,7 +8,7 @@
  *
  * @group feed
  */
-class Tests_Feeds_Atom extends WP_UnitTestCase {
+class Tests_Feeds_Atom extends WP_UnitTestCase_Base {
 	public static $user_id;
 	public static $posts;
 	public static $category;

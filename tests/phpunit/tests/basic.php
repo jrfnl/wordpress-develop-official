@@ -5,7 +5,7 @@
  *
  * @group testsuite
  */
-class Tests_Basic extends WP_UnitTestCase {
+class Tests_Basic extends WP_UnitTestCase_Base {
 
 	function test_license() {
 		// This test is designed to only run on trunk/master.

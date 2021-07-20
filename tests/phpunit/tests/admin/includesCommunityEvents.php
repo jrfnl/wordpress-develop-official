@@ -15,7 +15,7 @@
  *
  * @since 4.8.0
  */
-class Test_WP_Community_Events extends WP_UnitTestCase {
+class Test_WP_Community_Events extends WP_UnitTestCase_Base {
 	/**
 	 * An instance of the class to test.
 	 *

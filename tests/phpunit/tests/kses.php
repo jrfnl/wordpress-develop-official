@@ -5,7 +5,7 @@
  * @group formatting
  * @group kses
  */
-class Tests_Kses extends WP_UnitTestCase {
+class Tests_Kses extends WP_UnitTestCase_Base {
 
 	/**
 	 * @dataProvider data_wp_filter_post_kses_address

@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_JSEscape extends WP_UnitTestCase {
+class Tests_Formatting_JSEscape extends WP_UnitTestCase_Base {
 	function test_js_escape_simple() {
 		$out = esc_js( 'foo bar baz();' );
 		$this->assertSame( 'foo bar baz();', $out );

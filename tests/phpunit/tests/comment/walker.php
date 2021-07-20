@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_Walker extends WP_UnitTestCase {
+class Tests_Comment_Walker extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

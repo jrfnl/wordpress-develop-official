@@ -15,7 +15,7 @@
  *
  * @since 5.1.0
  */
-class Tests_Comment_IsAvatarCommentType extends WP_UnitTestCase {
+class Tests_Comment_IsAvatarCommentType extends WP_UnitTestCase_Base {
 	/**
 	 * Test the `is_avatar_comment_type()` function.
 	 *

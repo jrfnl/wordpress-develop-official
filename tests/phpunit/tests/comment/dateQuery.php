@@ -13,7 +13,7 @@
  * @group date
  * @group datequery
  */
-class Tests_Comment_DateQuery extends WP_UnitTestCase {
+class Tests_Comment_DateQuery extends WP_UnitTestCase_Base {
 
 	public $posts = array();
 

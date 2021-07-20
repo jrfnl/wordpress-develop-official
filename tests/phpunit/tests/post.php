@@ -5,7 +5,7 @@
  *
  * @group post
  */
-class Tests_Post extends WP_UnitTestCase {
+class Tests_Post extends WP_UnitTestCase_Base {
 	protected static $editor_id;
 	protected static $grammarian_id;
 

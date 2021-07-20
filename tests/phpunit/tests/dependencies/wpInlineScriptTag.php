@@ -8,7 +8,7 @@
  * @covers ::wp_get_inline_script_tag
  * @covers ::wp_print_inline_script_tag
  */
-class Tests_Functions_wpInlineScriptTag extends WP_UnitTestCase {
+class Tests_Functions_wpInlineScriptTag extends WP_UnitTestCase_Base {
 
 	private $event_handler = <<<'JS'
 document.addEventListener( 'DOMContentLoaded', function () {

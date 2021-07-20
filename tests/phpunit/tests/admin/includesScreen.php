@@ -4,7 +4,7 @@
  * @group admin
  * @group adminScreen
  */
-class Tests_Admin_includesScreen extends WP_UnitTestCase {
+class Tests_Admin_includesScreen extends WP_UnitTestCase_Base {
 	public $core_screens = array(
 		'index.php'                            => array(
 			'base'            => 'dashboard',

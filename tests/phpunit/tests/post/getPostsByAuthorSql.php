@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_GetPostsByAuthorSql extends WP_UnitTestCase {
+class Tests_Post_GetPostsByAuthorSql extends WP_UnitTestCase_Base {
 
 	public function test_post_type_post() {
 		$maybe_string = get_posts_by_author_sql( 'post' );

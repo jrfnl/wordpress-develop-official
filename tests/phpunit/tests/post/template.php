@@ -3,7 +3,7 @@
 /**
  * @group template
  */
-class Tests_Post_Template extends WP_UnitTestCase {
+class Tests_Post_Template extends WP_UnitTestCase_Base {
 
 	function test_wp_link_pages() {
 		$contents = array( 'One', 'Two', 'Three' );

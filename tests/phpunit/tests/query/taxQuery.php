@@ -4,7 +4,7 @@
  * @group query
  * @group taxonomy
  */
-class Tests_Query_TaxQuery extends WP_UnitTestCase {
+class Tests_Query_TaxQuery extends WP_UnitTestCase_Base {
 	public function test_tax_query_single_query_single_term_field_slug() {
 		$t  = self::factory()->term->create(
 			array(

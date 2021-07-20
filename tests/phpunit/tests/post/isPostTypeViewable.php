@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_IsPostTypeViewable extends WP_UnitTestCase {
+class Tests_Post_IsPostTypeViewable extends WP_UnitTestCase_Base {
 	public function test_should_return_false_for_non_publicly_queryable_types() {
 		register_post_type(
 			'wptests_pt',

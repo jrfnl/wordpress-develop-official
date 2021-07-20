@@ -5,7 +5,7 @@
  * @group slashes
  * @ticket 21767
  */
-class Tests_Meta_Slashes extends WP_UnitTestCase {
+class Tests_Meta_Slashes extends WP_UnitTestCase_Base {
 	protected static $editor_id;
 	protected static $post_id;
 	protected static $comment_id;

@@ -4,7 +4,7 @@
  * @group meta
  * @covers ::is_protected_meta
  */
-class Tests_Meta_isProtectedMeta extends WP_UnitTestCase {
+class Tests_Meta_isProtectedMeta extends WP_UnitTestCase_Base {
 
 	/**
 	 * @dataProvider protected_data

@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Terms_GetTermsParentsList extends WP_UnitTestCase {
+class Tests_Terms_GetTermsParentsList extends WP_UnitTestCase_Base {
 	protected static $c1;
 	protected static $c2;
 

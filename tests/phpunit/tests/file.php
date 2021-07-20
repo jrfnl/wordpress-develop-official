@@ -3,7 +3,7 @@
 /**
  * @group file
  */
-class Tests_File extends WP_UnitTestCase {
+class Tests_File extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

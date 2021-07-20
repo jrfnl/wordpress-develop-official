@@ -13,7 +13,7 @@ require_once __DIR__ . '/../includes/class-jsonserializable-object.php';
 /**
  * @group restapi
  */
-class Tests_REST_API extends WP_UnitTestCase {
+class Tests_REST_API extends WP_UnitTestCase_Base {
 	public function setUp() {
 		parent::setUp();
 

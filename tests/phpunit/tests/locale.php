@@ -4,7 +4,7 @@
  * @group l10n
  * @group i18n
  */
-class Tests_Locale extends WP_UnitTestCase {
+class Tests_Locale extends WP_UnitTestCase_Base {
 	/**
 	 * @var WP_Locale
 	 */

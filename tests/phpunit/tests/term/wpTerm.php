@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_WpTerm extends WP_UnitTestCase {
+class Tests_Term_WpTerm extends WP_UnitTestCase_Base {
 	protected static $term_id;
 
 	public function setUp() {

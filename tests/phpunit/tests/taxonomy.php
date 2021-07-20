@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Taxonomy extends WP_UnitTestCase {
+class Tests_Taxonomy extends WP_UnitTestCase_Base {
 	function test_get_post_taxonomies() {
 		$this->assertSame( array( 'category', 'post_tag', 'post_format' ), get_object_taxonomies( 'post' ) );
 	}

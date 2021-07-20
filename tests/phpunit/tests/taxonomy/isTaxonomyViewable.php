@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Taxonomy_IsTaxonomyViewable extends WP_UnitTestCase {
+class Tests_Taxonomy_IsTaxonomyViewable extends WP_UnitTestCase_Base {
 	public function setUp() {
 		parent::setUp();
 

@@ -2,7 +2,7 @@
 /**
  * @group query
  */
-class Tests_Query_CommentCount extends WP_UnitTestCase {
+class Tests_Query_CommentCount extends WP_UnitTestCase_Base {
 	public static $post_ids = array();
 	public $q;
 	public static $post_type = 'page'; // Can be anything.

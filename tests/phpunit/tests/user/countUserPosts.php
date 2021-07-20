@@ -4,7 +4,7 @@
  * @group user
  * @group post
  */
-class Tests_User_CountUserPosts extends WP_UnitTestCase {
+class Tests_User_CountUserPosts extends WP_UnitTestCase_Base {
 	public static $user_id;
 	public static $post_ids = array();
 

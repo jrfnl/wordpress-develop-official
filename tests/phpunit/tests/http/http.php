@@ -4,7 +4,7 @@
  *
  * @group http
  */
-class Tests_HTTP_HTTP extends WP_UnitTestCase {
+class Tests_HTTP_HTTP extends WP_UnitTestCase_Base {
 
 	const FULL_TEST_URL = 'http://username:password@host.name:9090/path?arg1=value1&arg2=value2#anchor';
 

@@ -4,7 +4,7 @@
  * @group formatting
  * @group datetime
  */
-class Tests_Formatting_Date extends WP_UnitTestCase {
+class Tests_Formatting_Date extends WP_UnitTestCase_Base {
 
 	/**
 	 * Unpatched, this test passes only when Europe/London is not observing DST.

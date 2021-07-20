@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_GetEditTermLink extends WP_UnitTestCase {
+class Tests_Term_GetEditTermLink extends WP_UnitTestCase_Base {
 	public function setUp() {
 		parent::setUp();
 		wp_set_current_user( self::factory()->user->create( array( 'role' => 'administrator' ) ) );

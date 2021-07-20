@@ -6,7 +6,7 @@
  * @group dependencies
  * @group scripts
  */
-class Tests_Functions_wpScriptTag extends WP_UnitTestCase {
+class Tests_Functions_wpScriptTag extends WP_UnitTestCase_Base {
 
 	function get_script_tag_type_set() {
 		add_theme_support( 'html5', array( 'script' ) );

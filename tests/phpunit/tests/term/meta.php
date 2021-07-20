@@ -5,7 +5,7 @@
  * @group meta
  * @ticket 10142
  */
-class Tests_Term_Meta extends WP_UnitTestCase {
+class Tests_Term_Meta extends WP_UnitTestCase_Base {
 
 	private $last_register_meta_call = array(
 		'object_type' => '',

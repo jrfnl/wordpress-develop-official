@@ -4,7 +4,7 @@
  * @group media
  * @group upload
  */
-class Tests_Image_Intermediate_Size extends WP_UnitTestCase {
+class Tests_Image_Intermediate_Size extends WP_UnitTestCase_Base {
 	function tearDown() {
 		$this->remove_added_uploads();
 

@@ -3,7 +3,7 @@
 /**
  * @group themes
  */
-class Tests_Theme_Support extends WP_UnitTestCase {
+class Tests_Theme_Support extends WP_UnitTestCase_Base {
 
 	function test_the_basics() {
 		add_theme_support( 'automatic-feed-links' );

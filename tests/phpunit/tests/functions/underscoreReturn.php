@@ -6,7 +6,7 @@
  *
  * @group functions.php
  */
-class Tests_Functions_UnderscoreReturn extends WP_UnitTestCase {
+class Tests_Functions_UnderscoreReturn extends WP_UnitTestCase_Base {
 
 	/**
 	 * @covers ::__return_true

@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_Formats extends WP_UnitTestCase {
+class Tests_Post_Formats extends WP_UnitTestCase_Base {
 	function test_set_get_post_format_for_post() {
 		$post_id = self::factory()->post->create();
 

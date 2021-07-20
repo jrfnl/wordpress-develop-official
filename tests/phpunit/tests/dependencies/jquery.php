@@ -4,7 +4,7 @@
  * @group dependencies
  * @group scripts
  */
-class Tests_Dependencies_jQuery extends WP_UnitTestCase {
+class Tests_Dependencies_jQuery extends WP_UnitTestCase_Base {
 
 	/**
 	 * @covers WP_Scripts::query

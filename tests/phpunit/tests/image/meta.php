@@ -9,7 +9,7 @@
  *
  * @covers ::wp_read_image_metadata
  */
-class Tests_Image_Meta extends WP_UnitTestCase {
+class Tests_Image_Meta extends WP_UnitTestCase_Base {
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {
 		require_once DIR_TESTROOT . '/includes/class-wp-test-stream.php';

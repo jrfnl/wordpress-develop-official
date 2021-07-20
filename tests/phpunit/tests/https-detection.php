@@ -3,7 +3,7 @@
 /**
  * @group https-detection
  */
-class Tests_HTTPS_Detection extends WP_UnitTestCase {
+class Tests_HTTPS_Detection extends WP_UnitTestCase_Base {
 
 	private $last_request_url;
 

@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::_cleanup_header_comment
  */
-class Tests_Functions_CleanupHeaderComment extends WP_UnitTestCase {
+class Tests_Functions_CleanupHeaderComment extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test cleanup header of header comment.

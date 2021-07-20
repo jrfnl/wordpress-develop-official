@@ -3,7 +3,7 @@
 /**
  * @group sitemaps
  */
-class Test_WP_Sitemaps_Posts extends WP_UnitTestCase {
+class Test_WP_Sitemaps_Posts extends WP_UnitTestCase_Base {
 	/**
 	 * Tests getting sitemap entries for post type page with 'posts' homepage.
 	 *

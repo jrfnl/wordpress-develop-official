@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_Autop extends WP_UnitTestCase {
+class Tests_Formatting_Autop extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 11008

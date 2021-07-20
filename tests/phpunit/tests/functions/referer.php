@@ -7,7 +7,7 @@
  * @covers ::wp_get_referer
  * @covers ::wp_get_raw_referer
  */
-class Tests_Functions_Referer extends WP_UnitTestCase {
+class Tests_Functions_Referer extends WP_UnitTestCase_Base {
 
 	public function setUp() {
 		parent::setUp();

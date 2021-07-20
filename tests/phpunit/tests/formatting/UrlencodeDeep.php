@@ -4,7 +4,7 @@
  * @group formatting
  * @ticket 22300
  */
-class Tests_Formatting_UrlencodeDeep extends WP_UnitTestCase {
+class Tests_Formatting_UrlencodeDeep extends WP_UnitTestCase_Base {
 
 	/**
 	 * Data Provider

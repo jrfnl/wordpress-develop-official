@@ -4,7 +4,7 @@
  * @group media
  * @group shortcode
  */
-class Tests_Media extends WP_UnitTestCase {
+class Tests_Media extends WP_UnitTestCase_Base {
 	protected static $large_id;
 	protected static $_sizes;
 	protected static $large_filename = 'test-image-large.jpg';

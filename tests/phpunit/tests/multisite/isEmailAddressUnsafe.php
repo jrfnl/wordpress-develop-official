@@ -5,7 +5,7 @@ if ( is_multisite() ) :
 	/**
 	 * @group multisite
 	 */
-	class Tests_Multisite_IsEmailAddressUnsafe extends WP_UnitTestCase {
+	class Tests_Multisite_IsEmailAddressUnsafe extends WP_UnitTestCase_Base {
 		public function test_string_domain_list_should_be_split_on_line_breaks() {
 			update_site_option( 'banned_email_domains', "foo.com\nbar.org\nbaz.gov" );
 			$this->assertTrue( is_email_address_unsafe( 'foo@bar.org' ) );

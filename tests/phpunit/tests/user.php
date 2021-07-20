@@ -5,7 +5,7 @@
  *
  * @group user
  */
-class Tests_User extends WP_UnitTestCase {
+class Tests_User extends WP_UnitTestCase_Base {
 	protected static $admin_id;
 	protected static $editor_id;
 	protected static $author_id;

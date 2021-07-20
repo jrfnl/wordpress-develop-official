@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Type_Registry extends WP_UnitTestCase {
+class WP_Test_Block_Type_Registry extends WP_UnitTestCase_Base {
 
 	/**
 	 * Fake block type registry.

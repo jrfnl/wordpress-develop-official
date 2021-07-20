@@ -1,6 +1,6 @@
 <?php
 
-class Tests_Term_CategoryExists extends WP_UnitTestCase {
+class Tests_Term_CategoryExists extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 30975
 	 */

@@ -4,7 +4,7 @@
  * @group post
  * @group ping
  */
-class Tests_Post_Pings extends WP_UnitTestCase {
+class Tests_Post_Pings extends WP_UnitTestCase_Base {
 
 	public function test_returns_to_ping_sites_from_post_id() {
 		$post_id = self::factory()->post->create(

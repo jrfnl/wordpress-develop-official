@@ -4,7 +4,7 @@
  * @group comment
  * @covers ::get_page_of_comment
  */
-class Tests_Comment_GetPageOfComment extends WP_UnitTestCase {
+class Tests_Comment_GetPageOfComment extends WP_UnitTestCase_Base {
 
 	public function test_last_comment() {
 		$p = self::factory()->post->create();

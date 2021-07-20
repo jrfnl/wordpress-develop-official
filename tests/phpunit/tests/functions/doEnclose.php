@@ -16,7 +16,7 @@
  * @group post
  * @covers ::do_enclose
  */
-class Tests_Functions_DoEnclose extends WP_UnitTestCase {
+class Tests_Functions_DoEnclose extends WP_UnitTestCase_Base {
 
 	/**
 	 * Setup before each test method.

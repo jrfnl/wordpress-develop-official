@@ -11,7 +11,7 @@
  *
  * @group widgets
  */
-class Test_WP_Widget_Custom_HTML extends WP_UnitTestCase {
+class Test_WP_Widget_Custom_HTML extends WP_UnitTestCase_Base {
 
 	/**
 	 * Args passed to the widget_custom_html_content filter.

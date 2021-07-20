@@ -5,7 +5,7 @@
  *
  * @group customize
  */
-class Tests_WP_Customize_Section extends WP_UnitTestCase {
+class Tests_WP_Customize_Section extends WP_UnitTestCase_Base {
 	protected static $admin_id;
 	protected static $user_ids = array();
 

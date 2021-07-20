@@ -2,7 +2,7 @@
 /**
  * @group shortcode
  */
-class Tests_Shortcode extends WP_UnitTestCase {
+class Tests_Shortcode extends WP_UnitTestCase_Base {
 
 	protected $shortcodes = array( 'test-shortcode-tag', 'footag', 'bartag', 'baztag', 'dumptag', 'hyphen', 'hyphen-foo', 'hyphen-foo-bar', 'url', 'img' );
 

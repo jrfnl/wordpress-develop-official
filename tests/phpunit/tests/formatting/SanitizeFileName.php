@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_SanitizeFileName extends WP_UnitTestCase {
+class Tests_Formatting_SanitizeFileName extends WP_UnitTestCase_Base {
 	function test_munges_extensions() {
 		// r17990
 		$file_name = sanitize_file_name( 'test.phtml.txt' );

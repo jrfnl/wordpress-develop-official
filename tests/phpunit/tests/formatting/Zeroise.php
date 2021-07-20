@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_Zeroise extends WP_UnitTestCase {
+class Tests_Formatting_Zeroise extends WP_UnitTestCase_Base {
 	function test_pads_with_leading_zeroes() {
 		$this->assertSame( '00005', zeroise( 5, 5 ) );
 	}

@@ -12,7 +12,7 @@
  *
  * @group customize
  */
-class Test_WP_Customize_Control extends WP_UnitTestCase {
+class Test_WP_Customize_Control extends WP_UnitTestCase_Base {
 
 	/**
 	 * Manager.

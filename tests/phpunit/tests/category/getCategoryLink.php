@@ -4,7 +4,7 @@
  * @group taxonomy
  * @covers ::get_category_link
  */
-class Tests_Category_GetCategoryLink extends WP_UnitTestCase {
+class Tests_Category_GetCategoryLink extends WP_UnitTestCase_Base {
 	public function test_success() {
 		$c = self::factory()->category->create();
 

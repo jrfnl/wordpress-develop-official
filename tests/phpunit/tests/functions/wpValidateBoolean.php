@@ -6,7 +6,7 @@
  * @group functions.php
  * @covers ::wp_validate_boolean
  */
-class Tests_Functions_wpValidateBoolean extends WP_UnitTestCase {
+class Tests_Functions_wpValidateBoolean extends WP_UnitTestCase_Base {
 	/**
 	 * Provides test scenarios for all possible scenarios in wp_validate_boolean().
 	 *

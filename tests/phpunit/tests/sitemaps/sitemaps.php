@@ -15,7 +15,7 @@
  *
  * @group sitemaps
  */
-class Test_Sitemaps extends WP_UnitTestCase {
+class Test_Sitemaps extends WP_UnitTestCase_Base {
 
 	/**
 	 * List of user IDs.

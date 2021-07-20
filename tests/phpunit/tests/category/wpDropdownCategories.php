@@ -3,7 +3,7 @@
  * @group taxonomy
  * @group category.php
  */
-class Tests_Category_WpDropdownCategories extends WP_UnitTestCase {
+class Tests_Category_WpDropdownCategories extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 30306
 	 */

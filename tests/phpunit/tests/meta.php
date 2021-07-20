@@ -3,7 +3,7 @@
 /**
  * @group meta
  */
-class Tests_Meta extends WP_UnitTestCase {
+class Tests_Meta extends WP_UnitTestCase_Base {
 	protected $updated_mids = array();
 
 	function setUp() {

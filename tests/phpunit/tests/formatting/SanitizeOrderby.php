@@ -3,7 +3,7 @@
 /**
  * @group sanitize_sql_orderby
  */
-class Tests_Formatting_SanitizeOrderby extends WP_UnitTestCase {
+class Tests_Formatting_SanitizeOrderby extends WP_UnitTestCase_Base {
 
 	/**
 	 * @covers ::sanitize_sql_orderby

@@ -9,7 +9,7 @@
 /**
  * @group restapi
  */
-class Tests_REST_Request extends WP_UnitTestCase {
+class Tests_REST_Request extends WP_UnitTestCase_Base {
 	public $request;
 
 	public function setUp() {

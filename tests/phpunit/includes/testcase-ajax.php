@@ -6,7 +6,7 @@
  * @subpackage UnitTests
  * @since      3.4.0
  */
-abstract class WP_Ajax_UnitTestCase extends WP_UnitTestCase {
+abstract class WP_Ajax_UnitTestCase extends WP_UnitTestCase_Base {
 
 	/**
 	 * Last Ajax response. This is set via echo -or- wp_die.

@@ -5,7 +5,7 @@
  *
  * @group widgets
  */
-class Tests_Widgets extends WP_UnitTestCase {
+class Tests_Widgets extends WP_UnitTestCase_Base {
 	public $sidebar_index;
 	public $valid_sidebar;
 

@@ -3,7 +3,7 @@
 /**
  * @group option
  */
-class Tests_Sanitize_Option extends WP_UnitTestCase {
+class Tests_Sanitize_Option extends WP_UnitTestCase_Base {
 
 	/**
 	 * Data provider to test all of the sanitize_option() case

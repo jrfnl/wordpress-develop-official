@@ -5,7 +5,7 @@
  * @group toolbar
  * @group admin
  */
-class Tests_AdminBar extends WP_UnitTestCase {
+class Tests_AdminBar extends WP_UnitTestCase_Base {
 	protected static $editor_id;
 	protected static $admin_id;
 	protected static $no_role_id;

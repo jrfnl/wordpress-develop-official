@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_GetCommentClass extends WP_UnitTestCase {
+class Tests_Comment_GetCommentClass extends WP_UnitTestCase_Base {
 	public function test_should_accept_comment_id() {
 		$post_id    = self::factory()->post->create();
 		$comment_id = self::factory()->comment->create( array( 'comment_post_ID' => $post_id ) );

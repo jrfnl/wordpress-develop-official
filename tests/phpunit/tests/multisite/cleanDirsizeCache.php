@@ -8,7 +8,7 @@ if ( is_multisite() ) :
 	 * @ticket 19879
 	 * @group multisite
 	 */
-	class Tests_Multisite_Dirsize_Cache extends WP_UnitTestCase {
+	class Tests_Multisite_Dirsize_Cache extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		function setUp() {

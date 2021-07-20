@@ -2,7 +2,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_NormalizeWhitespace extends WP_UnitTestCase {
+class Tests_Formatting_NormalizeWhitespace extends WP_UnitTestCase_Base {
 	/**
 	 * WhitespaceTest Content DataProvider
 	 *

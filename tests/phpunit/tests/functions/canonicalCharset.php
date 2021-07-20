@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::_canonical_charset
  */
-class Tests_Functions_CanonicalCharset extends WP_UnitTestCase {
+class Tests_Functions_CanonicalCharset extends WP_UnitTestCase_Base {
 
 	public function test_utf_8_lower() {
 		$this->assertSame( 'UTF-8', _canonical_charset( 'utf-8' ) );

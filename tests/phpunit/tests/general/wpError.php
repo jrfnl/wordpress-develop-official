@@ -8,7 +8,7 @@
  * @covers WP_Error
  * @coversDefaultClass WP_Error
  */
-class Tests_General_wpError extends WP_UnitTestCase {
+class Tests_General_wpError extends WP_UnitTestCase_Base {
 
 	/**
 	 * WP_Error fixture.

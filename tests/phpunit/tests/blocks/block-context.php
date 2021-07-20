@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Block_Context_Test extends WP_UnitTestCase {
+class WP_Block_Context_Test extends WP_UnitTestCase_Base {
 
 	/**
 	 * Registered block names.

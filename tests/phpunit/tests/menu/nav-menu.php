@@ -3,7 +3,7 @@
 /**
  * @group menu
  */
-class Tests_Nav_Menu_Theme_Change extends WP_UnitTestCase {
+class Tests_Nav_Menu_Theme_Change extends WP_UnitTestCase_Base {
 
 	/**
 	 * Set up.

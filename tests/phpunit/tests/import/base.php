@@ -1,6 +1,6 @@
 <?php
 
-abstract class WP_Import_UnitTestCase extends WP_UnitTestCase {
+abstract class WP_Import_UnitTestCase extends WP_UnitTestCase_Base {
 	/**
 	 * Import a WXR file.
 	 *

@@ -4,7 +4,7 @@
  * @group post
  * @group formatting
  */
-class Tests_Post_GetTheExcerpt extends WP_UnitTestCase {
+class Tests_Post_GetTheExcerpt extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 27246

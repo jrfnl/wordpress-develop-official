@@ -6,7 +6,7 @@
  * @covers ::wp_timezone_string
  * @covers ::wp_timezone
  */
-class Tests_Date_wpTimezone extends WP_UnitTestCase {
+class Tests_Date_wpTimezone extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 24730

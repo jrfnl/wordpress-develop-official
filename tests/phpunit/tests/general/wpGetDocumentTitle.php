@@ -9,7 +9,7 @@
  * @covers ::wp_get_document_title
  * @covers ::_wp_render_title_tag
  */
-class Tests_General_wpGetDocumentTitle extends WP_UnitTestCase {
+class Tests_General_wpGetDocumentTitle extends WP_UnitTestCase_Base {
 
 	public $blog_name;
 	public static $category_id;

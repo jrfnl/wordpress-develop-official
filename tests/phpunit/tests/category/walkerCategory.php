@@ -3,7 +3,7 @@
  * @group taxonomy
  * @group walker
  */
-class Tests_Category_Walker_Category extends WP_UnitTestCase {
+class Tests_Category_Walker_Category extends WP_UnitTestCase_Base {
 
 	/**
 	 * @var \Walker_Category The instance of the walker.

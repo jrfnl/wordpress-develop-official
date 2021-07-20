@@ -10,7 +10,7 @@
  * @group rewrite
  * @group taxonomy
  */
-class Tests_Query_IsTerm extends WP_UnitTestCase {
+class Tests_Query_IsTerm extends WP_UnitTestCase_Base {
 	protected $tag_id;
 	protected $cat_id;
 	protected $tax_id;

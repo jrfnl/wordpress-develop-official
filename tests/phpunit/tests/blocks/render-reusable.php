@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Render_Reusable_Blocks extends WP_UnitTestCase {
+class WP_Test_Render_Reusable_Blocks extends WP_UnitTestCase_Base {
 	/**
 	 * Fake user ID.
 	 *

@@ -3,7 +3,7 @@
 /**
  * @group pomo
  */
-class PluralFormsTest extends WP_UnitTestCase {
+class PluralFormsTest extends WP_UnitTestCase_Base {
 	/**
 	 * Parenthesize plural expression.
 	 *

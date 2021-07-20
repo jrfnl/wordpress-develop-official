@@ -4,7 +4,7 @@
  * @group taxonomy
  * @group category.php
  */
-class Tests_Category_GetCategories extends WP_UnitTestCase {
+class Tests_Category_GetCategories extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 36227
 	 */

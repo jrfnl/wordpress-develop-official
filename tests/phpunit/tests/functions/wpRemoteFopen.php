@@ -5,7 +5,7 @@
  * @group functions.php
  * @covers ::wp_remote_fopen
  */
-class Tests_Functions_wpRemoteFopen extends WP_UnitTestCase {
+class Tests_Functions_wpRemoteFopen extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 48845

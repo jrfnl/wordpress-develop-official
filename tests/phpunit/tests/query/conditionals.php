@@ -9,7 +9,7 @@
  * @group query
  * @group rewrite
  */
-class Tests_Query_Conditionals extends WP_UnitTestCase {
+class Tests_Query_Conditionals extends WP_UnitTestCase_Base {
 
 	protected $page_ids;
 	protected $post_ids;

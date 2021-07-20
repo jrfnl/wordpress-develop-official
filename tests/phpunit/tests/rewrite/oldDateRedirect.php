@@ -3,7 +3,7 @@
 /**
  * @group rewrite
  */
-class Tests_Rewrite_OldDateRedirect extends WP_UnitTestCase {
+class Tests_Rewrite_OldDateRedirect extends WP_UnitTestCase_Base {
 	protected $old_date_redirect_url;
 
 	public static $post_id;

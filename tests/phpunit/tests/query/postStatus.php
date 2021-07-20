@@ -3,7 +3,7 @@
 /**
  * @group query
  */
-class Tests_Query_PostStatus extends WP_UnitTestCase {
+class Tests_Query_PostStatus extends WP_UnitTestCase_Base {
 	public static $editor_user_id;
 	public static $author_user_id;
 	public static $subscriber_user_id;

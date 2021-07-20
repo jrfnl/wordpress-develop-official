@@ -3,7 +3,7 @@
  * @group pluggable
  * @group mail
  */
-class Tests_Mail extends WP_UnitTestCase {
+class Tests_Mail extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 		reset_phpmailer_instance();

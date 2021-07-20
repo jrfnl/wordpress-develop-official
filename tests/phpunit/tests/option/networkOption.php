@@ -10,7 +10,7 @@
  * @group ms-option
  * @group multisite
  */
-class Tests_Option_NetworkOption extends WP_UnitTestCase {
+class Tests_Option_NetworkOption extends WP_UnitTestCase_Base {
 
 	/**
 	 * @group ms-required

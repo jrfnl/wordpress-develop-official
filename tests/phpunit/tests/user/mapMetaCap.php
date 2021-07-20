@@ -4,7 +4,7 @@
  * @group user
  * @group capabilities
  */
-class Tests_User_MapMetaCap extends WP_UnitTestCase {
+class Tests_User_MapMetaCap extends WP_UnitTestCase_Base {
 
 	protected static $post_type    = 'mapmetacap';
 	protected static $super_admins = null;

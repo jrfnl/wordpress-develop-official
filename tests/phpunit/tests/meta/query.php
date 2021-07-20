@@ -6,7 +6,7 @@
  *
  * @group meta
  */
-class Tests_Meta_Query extends WP_UnitTestCase {
+class Tests_Meta_Query extends WP_UnitTestCase_Base {
 
 	public function test_empty_meta_query_param() {
 		$query = new WP_Meta_Query();

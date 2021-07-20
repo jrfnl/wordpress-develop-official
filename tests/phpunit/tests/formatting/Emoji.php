@@ -4,7 +4,7 @@
  * @group formatting
  * @group emoji
  */
-class Tests_Formatting_Emoji extends WP_UnitTestCase {
+class Tests_Formatting_Emoji extends WP_UnitTestCase_Base {
 
 	private $png_cdn = 'https://s.w.org/images/core/emoji/13.1.0/72x72/';
 	private $svn_cdn = 'https://s.w.org/images/core/emoji/13.1.0/svg/';

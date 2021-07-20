@@ -3,7 +3,7 @@
  * @group dependencies
  * @group scripts
  */
-class Tests_Dependencies extends WP_UnitTestCase {
+class Tests_Dependencies extends WP_UnitTestCase_Base {
 	function test_add() {
 		$dep = new WP_Dependencies;
 

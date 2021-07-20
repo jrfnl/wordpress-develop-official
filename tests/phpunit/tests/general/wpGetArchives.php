@@ -5,7 +5,7 @@
  * @group template
  * @covers ::wp_get_archives
  */
-class Tests_General_wpGetArchives extends WP_UnitTestCase {
+class Tests_General_wpGetArchives extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 

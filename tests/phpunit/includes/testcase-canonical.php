@@ -1,6 +1,6 @@
 <?php
 
-class WP_Canonical_UnitTestCase extends WP_UnitTestCase {
+class WP_Canonical_UnitTestCase extends WP_UnitTestCase_Base {
 	public static $old_current_user;
 	public static $author_id;
 	public static $post_ids    = array();

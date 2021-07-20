@@ -3,7 +3,7 @@
 /**
  * @group option
  */
-class Tests_Option_Registration extends WP_UnitTestCase {
+class Tests_Option_Registration extends WP_UnitTestCase_Base {
 	public function test_register() {
 		register_setting( 'test_group', 'test_option' );
 

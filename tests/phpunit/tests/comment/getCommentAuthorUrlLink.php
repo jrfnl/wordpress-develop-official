@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_GetCommentAuthorUrlLink extends WP_UnitTestCase {
+class Tests_Comment_GetCommentAuthorUrlLink extends WP_UnitTestCase_Base {
 	protected static $comments = array();
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {

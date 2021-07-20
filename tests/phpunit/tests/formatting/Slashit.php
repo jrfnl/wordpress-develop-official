@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_Slashit extends WP_UnitTestCase {
+class Tests_Formatting_Slashit extends WP_UnitTestCase_Base {
 	function test_backslashes_middle_numbers() {
 		$this->assertSame( "\\a-!9\\a943\\b\\c", backslashit( 'a-!9a943bc' ) );
 	}

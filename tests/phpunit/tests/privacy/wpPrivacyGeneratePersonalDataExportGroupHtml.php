@@ -15,7 +15,7 @@
  *
  * @since 5.2.0
  */
-class Tests_Privacy_wpPrivacyGeneratePersonalDataExportGroupHtml extends WP_UnitTestCase {
+class Tests_Privacy_wpPrivacyGeneratePersonalDataExportGroupHtml extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test when a single data item is passed.

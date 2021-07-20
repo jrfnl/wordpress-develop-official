@@ -3,7 +3,7 @@
  * @group link
  * @covers ::get_adjacent_post
  */
-class Tests_Link_GetAdjacentPost extends WP_UnitTestCase {
+class Tests_Link_GetAdjacentPost extends WP_UnitTestCase_Base {
 	protected $exclude_term;
 
 	/**

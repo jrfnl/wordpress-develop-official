@@ -3,7 +3,7 @@
 /**
  * @group option
  */
-class Tests_Option_SiteTransient extends WP_UnitTestCase {
+class Tests_Option_SiteTransient extends WP_UnitTestCase_Base {
 
 	public function setUp() {
 		parent::setUp();

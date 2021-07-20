@@ -4,7 +4,7 @@
  * @group rewrite
  * @ticket 5305
  */
-class Tests_Rewrite_NumericSlugs extends WP_UnitTestCase {
+class Tests_Rewrite_NumericSlugs extends WP_UnitTestCase_Base {
 	private $old_current_user;
 
 	public function setUp() {

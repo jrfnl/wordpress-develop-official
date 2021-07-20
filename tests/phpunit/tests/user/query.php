@@ -4,7 +4,7 @@
  *
  * @group user
  */
-class Tests_User_Query extends WP_UnitTestCase {
+class Tests_User_Query extends WP_UnitTestCase_Base {
 	protected static $author_ids;
 	protected static $sub_ids;
 	protected static $editor_ids;

@@ -4,7 +4,7 @@
  * @group post
  * @covers ::get_body_class
  */
-class Tests_Post_GetBodyClass extends WP_UnitTestCase {
+class Tests_Post_GetBodyClass extends WP_UnitTestCase_Base {
 	protected $post_id;
 
 	public function setUp() {

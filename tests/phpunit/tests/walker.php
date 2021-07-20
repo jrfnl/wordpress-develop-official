@@ -6,7 +6,7 @@
  * @group taxonomy
  * @group walker
  */
-class Tests_Walker extends WP_UnitTestCase {
+class Tests_Walker extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

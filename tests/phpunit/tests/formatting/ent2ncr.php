@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_Ent2NCR extends WP_UnitTestCase {
+class Tests_Formatting_Ent2NCR extends WP_UnitTestCase_Base {
 	/**
 	 * @dataProvider entities
 	 */

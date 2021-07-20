@@ -4,7 +4,7 @@
  * @group post
  */
 
-class Tests_Post_GetPages extends WP_UnitTestCase {
+class Tests_Post_GetPages extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 23167
 	 */

@@ -15,7 +15,7 @@
  *
  * @since 5.2.0
  */
-class Tests_Privacy_wpCreateUserRequest extends WP_UnitTestCase {
+class Tests_Privacy_wpCreateUserRequest extends WP_UnitTestCase_Base {
 	/**
 	 * Request ID.
 	 *

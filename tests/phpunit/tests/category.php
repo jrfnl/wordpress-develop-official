@@ -7,7 +7,7 @@
  *
  * @group category.php
  */
-class Tests_Category extends WP_UnitTestCase {
+class Tests_Category extends WP_UnitTestCase_Base {
 
 	function tearDown() {
 		_unregister_taxonomy( 'test_tax_cat' );

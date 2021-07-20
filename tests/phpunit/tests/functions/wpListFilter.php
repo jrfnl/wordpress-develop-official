@@ -7,7 +7,7 @@
  * @covers ::wp_filter_object_list
  * @covers ::wp_list_pluck
  */
-class Tests_Functions_wpListFilter extends WP_UnitTestCase {
+class Tests_Functions_wpListFilter extends WP_UnitTestCase_Base {
 	public $object_list = array();
 	public $array_list  = array();
 

@@ -4,7 +4,7 @@
  *
  * @group themes
  */
-class Tests_Template extends WP_UnitTestCase {
+class Tests_Template extends WP_UnitTestCase_Base {
 
 	protected $hierarchy = array();
 

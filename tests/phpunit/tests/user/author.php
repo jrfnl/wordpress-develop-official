@@ -6,7 +6,7 @@
  * @group author
  * @group user
  */
-class Tests_User_Author_Template extends WP_UnitTestCase {
+class Tests_User_Author_Template extends WP_UnitTestCase_Base {
 	protected static $author_id = 0;
 	protected static $post_id   = 0;
 

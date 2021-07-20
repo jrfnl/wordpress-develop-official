@@ -5,7 +5,7 @@
  *
  * @group user
  */
-class Tests_User_WpDropdownUsers extends WP_UnitTestCase {
+class Tests_User_WpDropdownUsers extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 31251

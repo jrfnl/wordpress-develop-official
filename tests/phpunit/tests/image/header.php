@@ -5,7 +5,7 @@ require_once ABSPATH . 'wp-admin/includes/class-custom-image-header.php';
  * @group image
  * @group header
  */
-class Tests_Image_Header extends WP_UnitTestCase {
+class Tests_Image_Header extends WP_UnitTestCase_Base {
 	public $custom_image_header;
 
 	function setUp() {

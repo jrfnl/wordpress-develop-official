@@ -4,7 +4,7 @@
  * @group formatting
  * @ticket 22300
  */
-class Tests_Formatting_MapDeep extends WP_UnitTestCase {
+class Tests_Formatting_MapDeep extends WP_UnitTestCase_Base {
 
 	public function test_map_deep_with_any_function_over_empty_array_should_return_empty_array() {
 		$this->assertSame( array(), map_deep( array(), array( $this, 'append_baba' ) ) );

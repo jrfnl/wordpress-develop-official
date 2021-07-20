@@ -3,7 +3,7 @@
 /**
  * This class is designed to make use of MockFS, a Virtual in-memory filesystem compatible with WP_Filesystem
  */
-abstract class WP_Filesystem_UnitTestCase extends WP_UnitTestCase {
+abstract class WP_Filesystem_UnitTestCase extends WP_UnitTestCase_Base {
 	function setUp() {
 		parent::setUp();
 		add_filter( 'filesystem_method_file', array( $this, 'filter_abstraction_file' ) );

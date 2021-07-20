@@ -4,7 +4,7 @@
  * @group l10n
  * @group i18n
  */
-class Tests_L10n_GetLocale extends WP_UnitTestCase {
+class Tests_L10n_GetLocale extends WP_UnitTestCase_Base {
 	public function test_should_respect_locale_global() {
 		global $locale;
 		$old_locale = $locale;

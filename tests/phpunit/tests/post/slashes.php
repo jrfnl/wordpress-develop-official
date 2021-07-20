@@ -5,7 +5,7 @@
  * @group slashes
  * @ticket 21767
  */
-class Tests_Post_Slashes extends WP_UnitTestCase {
+class Tests_Post_Slashes extends WP_UnitTestCase_Base {
 	protected static $author_id;
 	protected static $post_id;
 

@@ -6,7 +6,7 @@
  * @subpackage UnitTests
  * @since      5.6.0
  */
-class Block_Supported_Styles_Test extends WP_UnitTestCase {
+class Block_Supported_Styles_Test extends WP_UnitTestCase_Base {
 
 	/**
 	 * Registered block names.

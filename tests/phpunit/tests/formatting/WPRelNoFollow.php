@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Rel_No_Follow extends WP_UnitTestCase {
+class Tests_Rel_No_Follow extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 9959

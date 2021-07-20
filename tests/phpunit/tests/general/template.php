@@ -9,7 +9,7 @@
 
 require_once ABSPATH . 'wp-admin/includes/class-wp-site-icon.php';
 
-class Tests_General_Template extends WP_UnitTestCase {
+class Tests_General_Template extends WP_UnitTestCase_Base {
 	protected $wp_site_icon;
 	public $site_icon_id;
 	public $site_icon_url;

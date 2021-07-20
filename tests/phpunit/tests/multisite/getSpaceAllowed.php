@@ -7,7 +7,7 @@ if ( is_multisite() ) :
 	 *
 	 * @group multisite
 	 */
-	class Tests_Multisite_Get_Space_Allowed extends WP_UnitTestCase {
+	class Tests_Multisite_Get_Space_Allowed extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		public function setUp() {

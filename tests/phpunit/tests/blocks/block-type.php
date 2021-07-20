@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Type extends WP_UnitTestCase {
+class WP_Test_Block_Type extends WP_UnitTestCase_Base {
 
 	/**
 	 * Editor user ID.

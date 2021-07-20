@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Render extends WP_UnitTestCase {
+class WP_Test_Block_Render extends WP_UnitTestCase_Base {
 	/**
 	 * The location of the fixtures to test with.
 	 *

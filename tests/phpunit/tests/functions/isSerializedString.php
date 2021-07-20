@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::is_serialized_string
  */
-class Tests_Functions_IsSerializedString extends WP_UnitTestCase {
+class Tests_Functions_IsSerializedString extends WP_UnitTestCase_Base {
 
 	/**
 	 * Data provider method for testing `is_serialized_string()`.

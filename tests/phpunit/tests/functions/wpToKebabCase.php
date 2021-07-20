@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::_wp_to_kebab_case
  */
-class Tests_Functions_wpToKebabCase extends WP_UnitTestCase {
+class Tests_Functions_wpToKebabCase extends WP_UnitTestCase_Base {
 
 	public function test_wp_to_kebab_case() {
 		$this->assertSame( 'white', _wp_to_kebab_case( 'white' ) );

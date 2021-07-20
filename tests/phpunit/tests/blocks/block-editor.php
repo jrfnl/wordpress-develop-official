@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Editor extends WP_UnitTestCase {
+class WP_Test_Block_Editor extends WP_UnitTestCase_Base {
 
 	/**
 	 * Sets up each test method.

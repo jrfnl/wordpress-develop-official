@@ -3,7 +3,7 @@
 /**
  * @group hooks
  */
-class Tests_Actions_Callbacks extends WP_UnitTestCase {
+class Tests_Actions_Callbacks extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 23265

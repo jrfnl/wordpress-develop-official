@@ -4,7 +4,7 @@
  * @group taxonomy
  * @covers ::get_the_category_by_ID
  */
-class Tests_Category_GetTheCategoryById extends WP_UnitTestCase {
+class Tests_Category_GetTheCategoryById extends WP_UnitTestCase_Base {
 	public function test_success() {
 		$c = self::factory()->category->create(
 			array(

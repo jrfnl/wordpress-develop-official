@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_Utf8UriEncode extends WP_UnitTestCase {
+class Tests_Formatting_Utf8UriEncode extends WP_UnitTestCase_Base {
 
 	/**
 	 * Non-ASCII UTF-8 characters should be percent-encoded. Spaces etc.

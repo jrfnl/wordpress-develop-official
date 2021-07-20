@@ -3,7 +3,7 @@
 /**
  * @group sitemaps
  */
-class Test_WP_Sitemaps_Stylesheet extends WP_UnitTestCase {
+class Test_WP_Sitemaps_Stylesheet extends WP_UnitTestCase_Base {
 	/**
 	 * Test that stylesheet content can be filtered.
 	 */

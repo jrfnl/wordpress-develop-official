@@ -3,7 +3,7 @@
 /**
  * @group option
  */
-class Tests_Option_UpdateOption extends WP_UnitTestCase {
+class Tests_Option_UpdateOption extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 31047
 	 */

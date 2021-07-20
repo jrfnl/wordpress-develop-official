@@ -5,7 +5,7 @@
  *
  * @group url
  */
-class Tests_URL extends WP_UnitTestCase {
+class Tests_URL extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

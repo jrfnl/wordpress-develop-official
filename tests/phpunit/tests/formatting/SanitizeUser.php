@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_SanitizeUser extends WP_UnitTestCase {
+class Tests_Formatting_SanitizeUser extends WP_UnitTestCase_Base {
 	function test_strips_html() {
 		$input    = 'Captain <strong>Awesome</strong>';
 		$expected = is_multisite() ? 'captain awesome' : 'Captain Awesome';

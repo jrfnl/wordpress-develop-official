@@ -4,7 +4,7 @@
  * @group meta
  * @covers ::update_metadata
  */
-class Tests_Meta_UpdateMetadata extends WP_UnitTestCase {
+class Tests_Meta_UpdateMetadata extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 35795
 	 */

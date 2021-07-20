@@ -3,7 +3,7 @@
  * @group author
  * @group user
  */
-class Tests_User_ListAuthors extends WP_UnitTestCase {
+class Tests_User_ListAuthors extends WP_UnitTestCase_Base {
 	public static $user_ids = array();
 	public static $fred_id;
 	public static $posts     = array();

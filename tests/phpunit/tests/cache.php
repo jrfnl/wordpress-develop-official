@@ -3,7 +3,7 @@
 /**
  * @group cache
  */
-class Tests_Cache extends WP_UnitTestCase {
+class Tests_Cache extends WP_UnitTestCase_Base {
 	public $cache = null;
 
 	function setUp() {

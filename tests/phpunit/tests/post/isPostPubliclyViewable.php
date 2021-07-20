@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_IsPostPubliclyViewable extends WP_UnitTestCase {
+class Tests_Post_IsPostPubliclyViewable extends WP_UnitTestCase_Base {
 
 	/**
 	 * Array of post IDs to use as parents.

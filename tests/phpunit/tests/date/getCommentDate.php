@@ -6,7 +6,7 @@
  * @group comment
  * @covers ::get_comment_date
  */
-class Tests_Date_GetCommentDate extends WP_UnitTestCase {
+class Tests_Date_GetCommentDate extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 51184

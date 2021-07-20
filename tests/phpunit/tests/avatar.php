@@ -5,7 +5,7 @@
  *
  * @group avatar
  */
-class Tests_Avatar extends WP_UnitTestCase {
+class Tests_Avatar extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 21195
 	 */

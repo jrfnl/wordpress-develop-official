@@ -3,7 +3,7 @@
 /**
  * @group option
  */
-class Tests_Option_Option extends WP_UnitTestCase {
+class Tests_Option_Option extends WP_UnitTestCase_Base {
 
 	function __return_foo() {
 		return 'foo';

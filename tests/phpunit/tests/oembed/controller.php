@@ -4,7 +4,7 @@
  * @group oembed
  * @group restapi
  */
-class Test_oEmbed_Controller extends WP_UnitTestCase {
+class Test_oEmbed_Controller extends WP_UnitTestCase_Base {
 	/**
 	 * @var WP_REST_Server
 	 */

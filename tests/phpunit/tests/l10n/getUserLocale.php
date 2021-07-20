@@ -4,7 +4,7 @@
  * @group l10n
  * @group i18n
  */
-class Tests_L10n_GetUserLocale extends WP_UnitTestCase {
+class Tests_L10n_GetUserLocale extends WP_UnitTestCase_Base {
 	protected $user_id;
 
 	public function setUp() {

@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_WpUpdateTerm extends WP_UnitTestCase {
+class Tests_Term_WpUpdateTerm extends WP_UnitTestCase_Base {
 	public function test_wp_update_term_taxonomy_does_not_exist() {
 		$found = wp_update_term( 1, 'bar' );
 

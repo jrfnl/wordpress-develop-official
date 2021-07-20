@@ -9,7 +9,7 @@
 /**
  * @group restapi
  */
-class WP_Test_REST_Schema_Sanitization extends WP_UnitTestCase {
+class WP_Test_REST_Schema_Sanitization extends WP_UnitTestCase_Base {
 
 	public function test_type_number() {
 		$schema = array(

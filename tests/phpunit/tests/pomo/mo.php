@@ -3,7 +3,7 @@
 /**
  * @group pomo
  */
-class Tests_POMO_MO extends WP_UnitTestCase {
+class Tests_POMO_MO extends WP_UnitTestCase_Base {
 
 	function test_mo_simple() {
 		$mo = new MO();

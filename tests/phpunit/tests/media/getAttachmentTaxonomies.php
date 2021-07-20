@@ -4,7 +4,7 @@
  * @group media
  * @group taxonomy
  */
-class Tests_Media_GetAttachmentTaxonomies extends WP_UnitTestCase {
+class Tests_Media_GetAttachmentTaxonomies extends WP_UnitTestCase_Base {
 	public function test_should_return_attachment_taxonomy() {
 		register_taxonomy( 'wptests_tax', 'attachment' );
 

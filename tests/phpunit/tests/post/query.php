@@ -4,7 +4,7 @@
  * @group query
  * @group post
  */
-class Tests_Post_Query extends WP_UnitTestCase {
+class Tests_Post_Query extends WP_UnitTestCase_Base {
 	/**
 	 * @group taxonomy
 	 */

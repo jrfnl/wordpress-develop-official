@@ -4,7 +4,7 @@
  * @group post
  * @group query
  */
-class Tests_Post_GetPosts extends WP_UnitTestCase {
+class Tests_Post_GetPosts extends WP_UnitTestCase_Base {
 	public function test_offset_should_be_null_by_default() {
 		$p1 = self::factory()->post->create(
 			array(

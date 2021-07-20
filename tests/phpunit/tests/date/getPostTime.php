@@ -7,7 +7,7 @@
  * @covers ::get_post_time
  * @covers ::get_post_modified_time
  */
-class Tests_Date_GetPostTime extends WP_UnitTestCase {
+class Tests_Date_GetPostTime extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 28310

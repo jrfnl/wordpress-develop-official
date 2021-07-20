@@ -14,7 +14,7 @@
  *
  * @group blocks
  */
-class WP_Test_Block_Register extends WP_UnitTestCase {
+class WP_Test_Block_Register extends WP_UnitTestCase_Base {
 
 	/**
 	 * ID for a test post.

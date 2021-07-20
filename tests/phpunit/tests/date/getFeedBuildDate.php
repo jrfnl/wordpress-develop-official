@@ -6,7 +6,7 @@
  * @group feed
  * @covers ::get_feed_build_date
  */
-class Tests_Date_GetFeedBuildDate extends WP_UnitTestCase {
+class Tests_Date_GetFeedBuildDate extends WP_UnitTestCase_Base {
 
 	function tearDown() {
 		global $wp_query;

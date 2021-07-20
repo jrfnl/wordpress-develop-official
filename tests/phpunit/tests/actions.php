@@ -5,7 +5,7 @@
  *
  * @group hooks
  */
-class Tests_Actions extends WP_UnitTestCase {
+class Tests_Actions extends WP_UnitTestCase_Base {
 
 	function test_simple_action() {
 		$a   = new MockAction();

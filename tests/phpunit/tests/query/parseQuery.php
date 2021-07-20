@@ -3,7 +3,7 @@
 /**
  * @group query
  */
-class Tests_Query_ParseQuery extends WP_UnitTestCase {
+class Tests_Query_ParseQuery extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 29736
 	 */

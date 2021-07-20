@@ -7,7 +7,7 @@ if ( is_multisite() ) :
 	 *
 	 * @group multisite
 	 */
-	class Tests_Multisite extends WP_UnitTestCase {
+	class Tests_Multisite extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		function setUp() {

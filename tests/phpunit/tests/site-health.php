@@ -3,7 +3,7 @@
 /**
  * @group site-health
  */
-class Tests_Site_Health extends WP_UnitTestCase {
+class Tests_Site_Health extends WP_UnitTestCase_Base {
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {
 		// Include the `WP_Site_Health` file.
 		require_once ABSPATH . 'wp-admin/includes/class-wp-site-health.php';

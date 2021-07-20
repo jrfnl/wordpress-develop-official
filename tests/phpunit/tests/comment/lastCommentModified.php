@@ -4,7 +4,7 @@
  * @group comment
  * @ticket 38027
  */
-class Tests_Comment_Last_Modified extends WP_UnitTestCase {
+class Tests_Comment_Last_Modified extends WP_UnitTestCase_Base {
 	public function test_no_comments() {
 		$this->assertFalse( get_lastcommentmodified() );
 	}

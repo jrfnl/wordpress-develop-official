@@ -7,7 +7,7 @@
  * @covers ::is_user_logged_in
  * @covers ::wp_auth_check
  */
-class Tests_Functions_wpAuthCheck extends WP_UnitTestCase {
+class Tests_Functions_wpAuthCheck extends WP_UnitTestCase_Base {
 
 	/**
 	 * Run with user not logged in.

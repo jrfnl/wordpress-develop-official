@@ -1,6 +1,6 @@
 <?php
 
-abstract class WP_Test_Adjacent_Image_Link_TestCase extends WP_UnitTestCase {
+abstract class WP_Test_Adjacent_Image_Link_TestCase extends WP_UnitTestCase_Base {
 	/**
 	 * Array of 5 attachments for use in the tests.
 	 *

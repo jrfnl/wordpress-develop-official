@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_Objects extends WP_UnitTestCase {
+class Tests_Post_Objects extends WP_UnitTestCase_Base {
 
 	function test_get_post() {
 		$id = self::factory()->post->create();

@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_GetTermBy extends WP_UnitTestCase {
+class Tests_Term_GetTermBy extends WP_UnitTestCase_Base {
 
 	function test_get_term_by_slug() {
 		$term1 = wp_insert_term( 'Foo', 'category', array( 'slug' => 'foo' ) );

@@ -7,7 +7,7 @@
  * @group oembed-headers
  * @group xdebug
  */
-class Tests_oEmbed_HTTP_Headers extends WP_UnitTestCase {
+class Tests_oEmbed_HTTP_Headers extends WP_UnitTestCase_Base {
 
 	/**
 	 * @requires function xdebug_get_headers

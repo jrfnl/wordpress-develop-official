@@ -16,7 +16,7 @@
  * @group privacy
  * @covers ::wp_privacy_anonymize_data
  */
-class Tests_Functions_Anonymization extends WP_UnitTestCase {
+class Tests_Functions_Anonymization extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test that wp_privacy_anonymize_ip() properly anonymizes all possible IP address formats.

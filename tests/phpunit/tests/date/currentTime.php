@@ -5,7 +5,7 @@
  * @group datetime
  * @covers ::current_time
  */
-class Tests_Date_CurrentTime extends WP_UnitTestCase {
+class Tests_Date_CurrentTime extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 34378

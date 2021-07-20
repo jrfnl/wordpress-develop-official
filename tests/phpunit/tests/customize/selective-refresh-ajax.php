@@ -15,7 +15,7 @@
  * @since      4.5.0
  * @group      ajax
  */
-class Test_WP_Customize_Selective_Refresh_Ajax extends WP_UnitTestCase {
+class Test_WP_Customize_Selective_Refresh_Ajax extends WP_UnitTestCase_Base {
 
 	/**
 	 * Manager.

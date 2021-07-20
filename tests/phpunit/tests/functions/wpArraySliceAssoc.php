@@ -8,7 +8,7 @@
  * @group functions.php
  * @covers ::wp_array_slice_assoc
  */
-class Tests_Functions_wpArraySliceAssoc extends WP_UnitTestCase {
+class Tests_Functions_wpArraySliceAssoc extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test wp_array_slice_assoc().

@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_WpUniqueTermSlug extends WP_UnitTestCase {
+class Tests_Term_WpUniqueTermSlug extends WP_UnitTestCase_Base {
 	public function setUp() {
 		parent::setUp();
 		register_taxonomy( 'wptests_tax1', 'post', array( 'hierarchical' => false ) );

@@ -3,7 +3,7 @@
 /**
  * @group user
  */
-class Tests_User_UpdateUserCaches extends WP_UnitTestCase {
+class Tests_User_UpdateUserCaches extends WP_UnitTestCase_Base {
 	public function test_should_store_entire_database_row_in_users_bucket() {
 		global $wpdb;
 

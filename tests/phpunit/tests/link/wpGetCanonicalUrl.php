@@ -5,7 +5,7 @@
  * @group canonical
  * @covers ::wp_get_canonical_url
  */
-class Tests_Link_wpGetCanonicalUrl extends WP_UnitTestCase {
+class Tests_Link_wpGetCanonicalUrl extends WP_UnitTestCase_Base {
 	public static $post_id;
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {

@@ -7,7 +7,7 @@
  * @since      3.5.0
  * @group      ajax
  */
-class Tests_Ajax_Response extends WP_UnitTestCase {
+class Tests_Ajax_Response extends WP_UnitTestCase_Base {
 
 	/**
 	 * Saved error reporting level

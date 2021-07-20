@@ -4,7 +4,7 @@
  * @group user
  * @group datequery
  */
-class Tests_User_DateQuery extends WP_UnitTestCase {
+class Tests_User_DateQuery extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 27283
 	 */

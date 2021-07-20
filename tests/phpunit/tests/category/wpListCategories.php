@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Category_WpListCategories extends WP_UnitTestCase {
+class Tests_Category_WpListCategories extends WP_UnitTestCase_Base {
 	public function test_class() {
 		$c = self::factory()->category->create();
 

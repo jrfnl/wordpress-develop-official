@@ -4,7 +4,7 @@
  *
  * @group option
  */
-class Tests_Option_WP_Load_Alloptions extends WP_UnitTestCase {
+class Tests_Option_WP_Load_Alloptions extends WP_UnitTestCase_Base {
 	protected $alloptions = null;
 
 	function tearDown() {

@@ -10,7 +10,7 @@
  *
  * @group customize
  */
-class Tests_WP_Customize_Manager extends WP_UnitTestCase {
+class Tests_WP_Customize_Manager extends WP_UnitTestCase_Base {
 
 	/**
 	 * Customize manager instance re-instantiated with each test.

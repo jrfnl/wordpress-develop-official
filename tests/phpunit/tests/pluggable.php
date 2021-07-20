@@ -3,7 +3,7 @@
 /**
  * @group pluggable
  */
-class Tests_Pluggable extends WP_UnitTestCase {
+class Tests_Pluggable extends WP_UnitTestCase_Base {
 
 	/**
 	 * Tests that the signatures of all functions in pluggable.php match their expected signature.

@@ -1,6 +1,6 @@
 <?php
 
-class Tests_Query extends WP_UnitTestCase {
+class Tests_Query extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

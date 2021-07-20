@@ -6,7 +6,7 @@
  *
  * @group query
  */
-class Tests_Query_Results extends WP_UnitTestCase {
+class Tests_Query_Results extends WP_UnitTestCase_Base {
 	protected $q;
 
 	public static $cat_ids  = array();

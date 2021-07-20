@@ -3,7 +3,7 @@
 /**
  * @group sitemaps
  */
-class Test_Sitemaps_Functions extends WP_UnitTestCase {
+class Test_Sitemaps_Functions extends WP_UnitTestCase_Base {
 	/**
 	 * Test getting the correct number of URLs for a sitemap.
 	 */

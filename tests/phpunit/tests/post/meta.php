@@ -4,7 +4,7 @@
  * @group post
  * @group meta
  */
-class Tests_Post_Meta extends WP_UnitTestCase {
+class Tests_Post_Meta extends WP_UnitTestCase_Base {
 
 	private $last_register_meta_call = array(
 		'object_type' => '',

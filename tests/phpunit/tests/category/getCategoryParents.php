@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Category_GetCategoryParents extends WP_UnitTestCase {
+class Tests_Category_GetCategoryParents extends WP_UnitTestCase_Base {
 	protected $c1;
 	protected $c2;
 

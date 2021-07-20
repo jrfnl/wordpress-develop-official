@@ -3,7 +3,7 @@
  * @group link
  * @covers ::get_preview_post_link
  */
-class Tests_Link_GetPreviewPostLink extends WP_UnitTestCase {
+class Tests_Link_GetPreviewPostLink extends WP_UnitTestCase_Base {
 
 	public function test_get_preview_post_link() {
 		$post = self::factory()->post->create();

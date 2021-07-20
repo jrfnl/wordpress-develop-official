@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_WpDeleteTerm extends WP_UnitTestCase {
+class Tests_Term_WpDeleteTerm extends WP_UnitTestCase_Base {
 	protected $deleted_term;
 	protected $object_ids;
 

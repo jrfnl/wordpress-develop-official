@@ -7,7 +7,7 @@
  * @covers ::the_date
  * @covers ::the_weekday_date
  */
-class Tests_Date_TheDate extends WP_UnitTestCase {
+class Tests_Date_TheDate extends WP_UnitTestCase_Base {
 
 	/** @var array $hooks_called Count of hooks called. */
 	protected $hooks_called = array(

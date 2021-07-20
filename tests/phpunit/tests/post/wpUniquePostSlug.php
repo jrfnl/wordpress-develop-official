@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_wpUniquePostSlug extends WP_UnitTestCase {
+class Tests_Post_wpUniquePostSlug extends WP_UnitTestCase_Base {
 	protected $post_ids = array();
 
 	/**

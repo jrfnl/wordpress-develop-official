@@ -3,7 +3,7 @@
  * @group link
  * @covers ::get_post_comments_feed_link
  */
-class Tests_Link_GetPostCommentsFeedLink extends WP_UnitTestCase {
+class Tests_Link_GetPostCommentsFeedLink extends WP_UnitTestCase_Base {
 
 	public function test_post_link() {
 		$post_id = self::factory()->post->create();

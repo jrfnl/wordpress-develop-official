@@ -2,7 +2,7 @@
 /**
  * @group link
  */
-class Tests_Link extends WP_UnitTestCase {
+class Tests_Link extends WP_UnitTestCase_Base {
 
 	function _get_pagenum_link_cb( $url ) {
 		return $url . '/WooHoo';

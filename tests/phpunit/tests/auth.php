@@ -4,7 +4,7 @@
  * @group pluggable
  * @group auth
  */
-class Tests_Auth extends WP_UnitTestCase {
+class Tests_Auth extends WP_UnitTestCase_Base {
 	protected $user;
 
 	/**

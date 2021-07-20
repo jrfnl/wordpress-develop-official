@@ -4,7 +4,7 @@
  * @group query
  * @covers ::setup_postdata
  */
-class Tests_Query_SetupPostdata extends WP_UnitTestCase {
+class Tests_Query_SetupPostdata extends WP_UnitTestCase_Base {
 	protected $global_keys = array( 'id', 'authordata', 'currentday', 'currentmonth', 'page', 'pages', 'multipage', 'more', 'numpages' );
 
 	protected $global_data = array();

@@ -6,7 +6,7 @@
  * @group post
  * @covers ::get_the_modified_date
  */
-class Tests_Date_GetTheModifiedDate extends WP_UnitTestCase {
+class Tests_Date_GetTheModifiedDate extends WP_UnitTestCase_Base {
 
 	/**
 	 * Test get_the_modified_time with post_id parameter.

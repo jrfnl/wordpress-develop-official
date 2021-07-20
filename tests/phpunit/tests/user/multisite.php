@@ -9,7 +9,7 @@ if ( is_multisite() ) :
 	 * @group ms-user
 	 * @group multisite
 	 */
-	class Tests_Multisite_User extends WP_UnitTestCase {
+	class Tests_Multisite_User extends WP_UnitTestCase_Base {
 		protected $suppress = false;
 
 		function setUp() {

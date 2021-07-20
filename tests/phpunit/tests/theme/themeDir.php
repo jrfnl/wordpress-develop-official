@@ -5,7 +5,7 @@
  *
  * @group themes
  */
-class Tests_Theme_ThemeDir extends WP_UnitTestCase {
+class Tests_Theme_ThemeDir extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

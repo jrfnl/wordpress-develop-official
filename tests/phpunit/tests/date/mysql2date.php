@@ -5,7 +5,7 @@
  * @group datetime
  * @covers ::mysql2date
  */
-class Tests_Date_mysql2date extends WP_UnitTestCase {
+class Tests_Date_mysql2date extends WP_UnitTestCase_Base {
 
 	function tearDown() {
 		// phpcs:ignore WordPress.DateTime.RestrictedFunctions.timezone_change_date_default_timezone_set

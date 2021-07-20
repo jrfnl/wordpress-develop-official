@@ -6,7 +6,7 @@
  * @ticket 34292
  * @covers ::wp_resource_hints
  */
-class Tests_General_wpResourceHints extends WP_UnitTestCase {
+class Tests_General_wpResourceHints extends WP_UnitTestCase_Base {
 	private $old_wp_scripts;
 	private $old_wp_styles;
 

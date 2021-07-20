@@ -8,7 +8,7 @@ if ( is_multisite() ) :
 	 * @group ms-network
 	 * @group multisite
 	 */
-	class Tests_Multisite_Network extends WP_UnitTestCase {
+	class Tests_Multisite_Network extends WP_UnitTestCase_Base {
 		protected $plugin_hook_count = 0;
 		protected $suppress          = false;
 

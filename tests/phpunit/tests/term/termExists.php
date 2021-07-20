@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_TermExists extends WP_UnitTestCase {
+class Tests_TermExists extends WP_UnitTestCase_Base {
 	public function test_term_exists_term_0() {
 		$this->assertSame( 0, term_exists( 0 ) );
 	}

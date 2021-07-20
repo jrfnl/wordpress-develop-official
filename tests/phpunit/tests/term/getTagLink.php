@@ -4,7 +4,7 @@
  * @group taxonomy
  * @covers ::get_tag_link
  */
-class Tests_Term_GetTagLink extends WP_UnitTestCase {
+class Tests_Term_GetTagLink extends WP_UnitTestCase_Base {
 	public function test_success() {
 		$t = self::factory()->term->create(
 			array(

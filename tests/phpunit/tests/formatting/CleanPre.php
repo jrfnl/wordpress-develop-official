@@ -7,7 +7,7 @@
  * @group formatting
  * @expectedDeprecated clean_pre
  */
-class Tests_Formatting_CleanPre extends WP_UnitTestCase {
+class Tests_Formatting_CleanPre extends WP_UnitTestCase_Base {
 
 	function test_removes_self_closing_br_with_space() {
 		$source = 'a b c\n<br />sldfj<br />';

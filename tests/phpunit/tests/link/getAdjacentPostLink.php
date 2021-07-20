@@ -6,7 +6,7 @@
  * @covers ::get_next_post_link
  * @covers ::get_previous_post_link
  */
-class Tests_Link_GetAdjacentPostLink extends WP_UnitTestCase {
+class Tests_Link_GetAdjacentPostLink extends WP_UnitTestCase_Base {
 
 	protected $post_ids;
 	protected $cat_id;

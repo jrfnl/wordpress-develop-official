@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_GetCommentAuthorUrl extends WP_UnitTestCase {
+class Tests_Comment_GetCommentAuthorUrl extends WP_UnitTestCase_Base {
 	public function get_comment_author_url_filter( $url, $id, $comment ) {
 		$this->assertSame( $id, $comment->comment_ID );
 

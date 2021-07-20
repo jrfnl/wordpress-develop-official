@@ -10,7 +10,7 @@
  * @group  restapi
  * @group  app_password
  */
-class Test_WP_Application_Passwords extends WP_UnitTestCase {
+class Test_WP_Application_Passwords extends WP_UnitTestCase_Base {
 
 	/**
 	 * Administrator user id.

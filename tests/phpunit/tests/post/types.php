@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_Types extends WP_UnitTestCase {
+class Tests_Post_Types extends WP_UnitTestCase_Base {
 
 	/**
 	 * Post type.

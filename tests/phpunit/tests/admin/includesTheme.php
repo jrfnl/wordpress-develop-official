@@ -2,7 +2,7 @@
 /**
  * @group themes
  */
-class Tests_Admin_includesTheme extends WP_UnitTestCase {
+class Tests_Admin_includesTheme extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

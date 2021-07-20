@@ -4,7 +4,7 @@
  * @group l10n
  * @group i18n
  */
-class Tests_L10n extends WP_UnitTestCase {
+class Tests_L10n extends WP_UnitTestCase_Base {
 
 	/**
 	 * Long Dummy Text.

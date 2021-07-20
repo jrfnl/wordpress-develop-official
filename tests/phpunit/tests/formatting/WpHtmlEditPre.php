@@ -4,7 +4,7 @@
  * @group formatting
  * @expectedDeprecated wp_htmledit_pre
  */
-class Tests_Formatting_WpHtmlEditPre extends WP_UnitTestCase {
+class Tests_Formatting_WpHtmlEditPre extends WP_UnitTestCase_Base {
 
 	function _charset_iso_8859_1() {
 		return 'iso-8859-1';

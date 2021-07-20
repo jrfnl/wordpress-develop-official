@@ -2,7 +2,7 @@
 /**
  * @group link
  */
-class Tests_Link_ThemeFile extends WP_UnitTestCase {
+class Tests_Link_ThemeFile extends WP_UnitTestCase_Base {
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {
 		$themes = array(

@@ -5,7 +5,7 @@
  * @group comment
  * @covers ::get_next_comments_link
  */
-class Tests_Link_GetNextCommentsLink extends WP_UnitTestCase {
+class Tests_Link_GetNextCommentsLink extends WP_UnitTestCase_Base {
 
 	public function test_page_should_respect_value_of_cpage_query_var() {
 		$p = self::factory()->post->create();

@@ -5,7 +5,7 @@
  *
  * @group rewrite
  */
-class Tests_Rewrite extends WP_UnitTestCase {
+class Tests_Rewrite extends WP_UnitTestCase_Base {
 	private $home_url;
 
 	function setUp() {

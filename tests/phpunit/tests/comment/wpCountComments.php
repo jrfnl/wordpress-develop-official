@@ -1,6 +1,6 @@
 <?php
 
-class Tests_WP_Count_Comments extends WP_UnitTestCase {
+class Tests_WP_Count_Comments extends WP_UnitTestCase_Base {
 
 	public function test_wp_count_comments() {
 		$count = wp_count_comments();

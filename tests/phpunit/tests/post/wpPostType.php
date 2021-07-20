@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_WP_Post_Type extends WP_UnitTestCase {
+class Tests_Post_WP_Post_Type extends WP_UnitTestCase_Base {
 	public function test_instances() {
 		global $wp_post_types;
 

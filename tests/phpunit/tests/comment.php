@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment extends WP_UnitTestCase {
+class Tests_Comment extends WP_UnitTestCase_Base {
 	protected static $user_id;
 	protected static $post_id;
 	protected static $notify_message = '';

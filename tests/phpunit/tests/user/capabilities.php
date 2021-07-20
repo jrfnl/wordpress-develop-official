@@ -6,7 +6,7 @@
  * @group user
  * @group capabilities
  */
-class Tests_User_Capabilities extends WP_UnitTestCase {
+class Tests_User_Capabilities extends WP_UnitTestCase_Base {
 
 	/**
 	 * @var WP_User[] $users

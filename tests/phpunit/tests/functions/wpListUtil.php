@@ -3,7 +3,7 @@
 /**
  * @group functions.php
  */
-class Tests_Functions_wpListUtil extends WP_UnitTestCase {
+class Tests_Functions_wpListUtil extends WP_UnitTestCase_Base {
 
 	public function data_test_wp_list_pluck() {
 		return array(

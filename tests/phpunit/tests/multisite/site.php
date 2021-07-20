@@ -8,7 +8,7 @@ if ( is_multisite() ) :
 	 * @group ms-site
 	 * @group multisite
 	 */
-	class Tests_Multisite_Site extends WP_UnitTestCase {
+	class Tests_Multisite_Site extends WP_UnitTestCase_Base {
 		protected $suppress                = false;
 		protected $site_status_hooks       = array();
 		protected $wp_initialize_site_args = array();

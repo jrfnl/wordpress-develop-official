@@ -4,7 +4,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_CapitalPDangit extends WP_UnitTestCase {
+class Tests_Formatting_CapitalPDangit extends WP_UnitTestCase_Base {
 	function test_esc_attr_quotes() {
 		global $wp_current_filter;
 		$this->assertSame( 'Something about WordPress', capital_P_dangit( 'Something about Wordpress' ) );

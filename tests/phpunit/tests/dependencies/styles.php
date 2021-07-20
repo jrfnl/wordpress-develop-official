@@ -8,7 +8,7 @@
  * @covers ::wp_style_add_data
  * @covers ::wp_add_inline_style
  */
-class Tests_Dependencies_Styles extends WP_UnitTestCase {
+class Tests_Dependencies_Styles extends WP_UnitTestCase_Base {
 	private $old_wp_styles;
 	private $old_wp_scripts;
 

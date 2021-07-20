@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_termCount extends WP_UnitTestCase {
+class Tests_Term_termCount extends WP_UnitTestCase_Base {
 
 	/**
 	 * Term ID for testing attachment counts.

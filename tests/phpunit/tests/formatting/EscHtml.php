@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_EscHtml extends WP_UnitTestCase {
+class Tests_Formatting_EscHtml extends WP_UnitTestCase_Base {
 	function test_esc_html_basics() {
 		// Simple string.
 		$html = 'The quick brown fox.';

@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_WpAllowComment extends WP_UnitTestCase {
+class Tests_Comment_WpAllowComment extends WP_UnitTestCase_Base {
 	protected static $post_id;
 	protected static $comment_id;
 

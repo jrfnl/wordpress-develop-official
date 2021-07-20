@@ -1,6 +1,6 @@
 <?php
 
-abstract class WP_Test_XML_TestCase extends WP_UnitTestCase {
+abstract class WP_Test_XML_TestCase extends WP_UnitTestCase_Base {
 	/**
 	 * Load XML from a string.
 	 *

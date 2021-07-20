@@ -6,7 +6,7 @@
  * @group post
  * @group formatting
  */
-class Tests_Post_Output extends WP_UnitTestCase {
+class Tests_Post_Output extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

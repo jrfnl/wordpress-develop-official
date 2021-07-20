@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Taxonomy_GetObjectTaxonomies extends WP_UnitTestCase {
+class Tests_Taxonomy_GetObjectTaxonomies extends WP_UnitTestCase_Base {
 	public function setUp() {
 		parent::setUp();
 		register_post_type( 'wptests_pt' );

@@ -3,7 +3,7 @@
 /**
  * @group rewrite
  */
-class Tests_Rewrite_Permastructs extends WP_UnitTestCase {
+class Tests_Rewrite_Permastructs extends WP_UnitTestCase_Base {
 
 	public function setUp() {
 		parent::setUp();

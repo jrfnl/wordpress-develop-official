@@ -5,7 +5,7 @@
  * @group media
  * @group upload
  */
-class Tests_Image_Dimensions extends WP_UnitTestCase {
+class Tests_Image_Dimensions extends WP_UnitTestCase_Base {
 	function test_400x400_no_crop() {
 		// Landscape: resize 640x480 to fit 400x400: 400x300.
 		$out = image_resize_dimensions( 640, 480, 400, 400, false );

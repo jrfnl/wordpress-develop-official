@@ -5,7 +5,7 @@
  * @group functions.php
  * @covers ::wp_allowed_protocols
  */
-class Tests_Functions_AllowedProtocols extends WP_UnitTestCase {
+class Tests_Functions_AllowedProtocols extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 19354

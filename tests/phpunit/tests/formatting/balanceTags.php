@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_BalanceTags extends WP_UnitTestCase {
+class Tests_Formatting_BalanceTags extends WP_UnitTestCase_Base {
 
 	function nestable_tags() {
 		return array(

@@ -2,7 +2,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_GetCommentAuthorEmailLink extends WP_UnitTestCase {
+class Tests_Comment_GetCommentAuthorEmailLink extends WP_UnitTestCase_Base {
 	public static $comment;
 
 	public function setUp() {

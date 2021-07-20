@@ -7,7 +7,7 @@ if ( is_multisite() ) :
 	 * @group ms-site
 	 * @group multisite
 	 */
-	class Tests_Multisite_Site_Details extends WP_UnitTestCase {
+	class Tests_Multisite_Site_Details extends WP_UnitTestCase_Base {
 		/**
 		 * @dataProvider data_allowed_options
 		 *

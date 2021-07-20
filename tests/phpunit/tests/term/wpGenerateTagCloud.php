@@ -2,7 +2,7 @@
 /**
  * @group taxonomy
  */
-class Tests_WP_Generate_Tag_Cloud extends WP_UnitTestCase {
+class Tests_WP_Generate_Tag_Cloud extends WP_UnitTestCase_Base {
 	protected $terms = array();
 
 	/**

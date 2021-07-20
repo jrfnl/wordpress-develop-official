@@ -4,7 +4,7 @@
  * @group query
  * @group meta
  */
-class Tests_Query_MetaQuery extends WP_UnitTestCase {
+class Tests_Query_MetaQuery extends WP_UnitTestCase_Base {
 	public function test_meta_query_no_key() {
 		$p1 = self::factory()->post->create();
 		$p2 = self::factory()->post->create();

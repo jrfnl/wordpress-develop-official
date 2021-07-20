@@ -4,7 +4,7 @@
  * @group formatting
  * @ticket 38773
  */
-class Tests_Formatting_HumanTimeDiff extends WP_UnitTestCase {
+class Tests_Formatting_HumanTimeDiff extends WP_UnitTestCase_Base {
 
 	/**
 	 * @group formatting

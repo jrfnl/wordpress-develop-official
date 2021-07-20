@@ -4,7 +4,7 @@
  * @group rewrite
  * @ticket 33920
  */
-class Tests_Rewrite_OldSlugRedirect extends WP_UnitTestCase {
+class Tests_Rewrite_OldSlugRedirect extends WP_UnitTestCase_Base {
 	protected $old_slug_redirect_url;
 
 	protected $post_id;

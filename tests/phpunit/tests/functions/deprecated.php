@@ -11,7 +11,7 @@
  * @group functions.php
  * @group deprecated
  */
-class Tests_Functions_Deprecated extends WP_UnitTestCase {
+class Tests_Functions_Deprecated extends WP_UnitTestCase_Base {
 
 	/**
 	 * List of functions that have been passed through _deprecated_function().

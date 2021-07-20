@@ -10,7 +10,7 @@
  *
  * @group robots
  */
-class Tests_Robots extends WP_UnitTestCase {
+class Tests_Robots extends WP_UnitTestCase_Base {
 
 	public function setUp() {
 		parent::setUp();

@@ -5,7 +5,7 @@
  * @group media
  * @group upload
  */
-class Tests_Image_Functions extends WP_UnitTestCase {
+class Tests_Image_Functions extends WP_UnitTestCase_Base {
 
 	/**
 	 * Setup test fixture

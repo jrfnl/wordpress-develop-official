@@ -5,7 +5,7 @@
  *
  * @group query
  */
-class Tests_Query_Stickies extends WP_UnitTestCase {
+class Tests_Query_Stickies extends WP_UnitTestCase_Base {
 	public static $posts = array();
 
 	public static function wpSetUpBeforeClass( WP_UnitTest_Factory $factory ) {

@@ -4,7 +4,7 @@
  * @group http
  * @group external-http
  */
-class Tests_HTTP_Functions extends WP_UnitTestCase {
+class Tests_HTTP_Functions extends WP_UnitTestCase_Base {
 
 	/**
 	 * @covers ::wp_remote_head

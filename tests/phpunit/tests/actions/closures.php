@@ -5,7 +5,7 @@
  *
  * @group hooks
  */
-class Tests_Actions_Closures extends WP_UnitTestCase {
+class Tests_Actions_Closures extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 10493

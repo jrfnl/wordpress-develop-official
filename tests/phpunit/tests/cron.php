@@ -5,7 +5,7 @@
  *
  * @group cron
  */
-class Tests_Cron extends WP_UnitTestCase {
+class Tests_Cron extends WP_UnitTestCase_Base {
 	/**
 	 * @var array Cron array for testing preflight filters.
 	 */

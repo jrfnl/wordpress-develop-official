@@ -4,7 +4,7 @@
  * @group post
  * @group revision
  */
-class Tests_Post_Revisions extends WP_UnitTestCase {
+class Tests_Post_Revisions extends WP_UnitTestCase_Base {
 	protected static $admin_user_id;
 	protected static $editor_user_id;
 	protected static $author_user_id;

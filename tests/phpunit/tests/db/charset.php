@@ -6,7 +6,7 @@
  * @group wpdb
  * @group security-153
  */
-class Tests_DB_Charset extends WP_UnitTestCase {
+class Tests_DB_Charset extends WP_UnitTestCase_Base {
 
 	/**
 	 * Our special WPDB

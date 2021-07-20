@@ -3,7 +3,7 @@
 /**
  * @group rewrite
  */
-class Tests_Rewrite_AddRewriteEndpoint extends WP_UnitTestCase {
+class Tests_Rewrite_AddRewriteEndpoint extends WP_UnitTestCase_Base {
 	private $qvs;
 	protected static $test_page_id;
 	protected static $test_post_id;

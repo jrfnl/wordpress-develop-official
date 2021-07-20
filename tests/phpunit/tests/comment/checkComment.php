@@ -3,7 +3,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_CheckComment extends WP_UnitTestCase {
+class Tests_Comment_CheckComment extends WP_UnitTestCase_Base {
 	public function test_should_return_true_when_comment_previously_approved_is_disabled() {
 		$author       = 'BobtheBuilder';
 		$author_email = 'bob@example.com';

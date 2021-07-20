@@ -5,7 +5,7 @@
  * @group slashes
  * @ticket 21767
  */
-class Tests_Option_Slashes extends WP_UnitTestCase {
+class Tests_Option_Slashes extends WP_UnitTestCase_Base {
 
 	function setUp() {
 		parent::setUp();

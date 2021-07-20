@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term extends WP_UnitTestCase {
+class Tests_Term extends WP_UnitTestCase_Base {
 	protected $taxonomy        = 'category';
 	protected static $post_ids = array();
 

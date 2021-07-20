@@ -4,7 +4,7 @@
  * @group menu
  * @ticket 36590
  */
-class Tests_Menu_WpExpandNavMenuPostData extends WP_UnitTestCase {
+class Tests_Menu_WpExpandNavMenuPostData extends WP_UnitTestCase_Base {
 	public function test_unnested_data_should_expand() {
 		require_once ABSPATH . 'wp-admin/includes/nav-menu.php';
 

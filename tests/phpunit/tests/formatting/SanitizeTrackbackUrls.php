@@ -3,7 +3,7 @@
 /**
  * @group formatting
  */
-class Tests_Formatting_SanitizeTrackbackUrls extends WP_UnitTestCase {
+class Tests_Formatting_SanitizeTrackbackUrls extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 21624
 	 * @dataProvider breaks

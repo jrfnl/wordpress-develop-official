@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_getTermField extends WP_UnitTestCase {
+class Tests_Term_getTermField extends WP_UnitTestCase_Base {
 
 	public $taxonomy = 'wptests_tax';
 

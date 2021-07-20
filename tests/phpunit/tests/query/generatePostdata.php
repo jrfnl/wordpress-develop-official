@@ -4,7 +4,7 @@
  * @group query
  * @covers ::generate_postdata
  */
-class Tests_Query_GeneratePostdata extends WP_UnitTestCase {
+class Tests_Query_GeneratePostdata extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 42814

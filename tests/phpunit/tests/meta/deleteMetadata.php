@@ -3,7 +3,7 @@
 /**
  * @group meta
  */
-class Tests_Meta_DeleteMetadata extends WP_UnitTestCase {
+class Tests_Meta_DeleteMetadata extends WP_UnitTestCase_Base {
 	public function test_all_metas_for_key_should_be_deleted_when_no_meta_value_is_provided() {
 		$vals = array( '0', '1', '2' );
 		foreach ( $vals as $val ) {

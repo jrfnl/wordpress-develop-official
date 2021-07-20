@@ -3,7 +3,7 @@
 /**
  * @group post
  */
-class Tests_Post_IsPostStatusViewable extends WP_UnitTestCase {
+class Tests_Post_IsPostStatusViewable extends WP_UnitTestCase_Base {
 
 	/**
 	 * Remove the test status from the global when finished.

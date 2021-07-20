@@ -3,7 +3,7 @@
 /**
  * @group oembed
  */
-class Tests_Embed_Template extends WP_UnitTestCase {
+class Tests_Embed_Template extends WP_UnitTestCase_Base {
 	function test_oembed_output_post() {
 		$user = self::factory()->user->create_and_get(
 			array(

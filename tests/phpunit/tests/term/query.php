@@ -3,7 +3,7 @@
 /**
  * @group taxonomy
  */
-class Tests_Term_Query extends WP_UnitTestCase {
+class Tests_Term_Query extends WP_UnitTestCase_Base {
 	/**
 	 * @ticket 37545
 	 */

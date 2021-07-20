@@ -8,7 +8,7 @@ if ( is_multisite() ) :
 	 * @group ms-bootstrap
 	 * @group multisite
 	 */
-	class Tests_Multisite_Bootstrap extends WP_UnitTestCase {
+	class Tests_Multisite_Bootstrap extends WP_UnitTestCase_Base {
 		protected static $network_ids;
 		protected static $site_ids;
 

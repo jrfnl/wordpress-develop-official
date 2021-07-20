@@ -4,7 +4,7 @@
  * @group bookmark
  * @covers ::get_bookmark
  */
-class Tests_Bookmark_GetBookmark extends WP_UnitTestCase {
+class Tests_Bookmark_GetBookmark extends WP_UnitTestCase_Base {
 	/**
 	 * Instance of the bookmark object.
 	 *

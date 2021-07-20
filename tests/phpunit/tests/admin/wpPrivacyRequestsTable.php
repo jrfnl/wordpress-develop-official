@@ -15,7 +15,7 @@
  *
  * @since 5.1.0
  */
-class Tests_Admin_wpPrivacyRequestsTable extends WP_UnitTestCase {
+class Tests_Admin_wpPrivacyRequestsTable extends WP_UnitTestCase_Base {
 	/**
 	 * Get instance for mocked class.
 	 *

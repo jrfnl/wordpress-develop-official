@@ -17,7 +17,7 @@
  *
  * @since 5.9.0
  */
-class Test_WP_Debug_Mode extends WP_UnitTestCase {
+class Test_WP_Debug_Mode extends WP_UnitTestCase_Base {
 	/**
 	 * Test: `wp_debug_mode()` should log, but not display, errors for `ms-files.php`.
 	 *

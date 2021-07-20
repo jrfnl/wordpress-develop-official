@@ -5,7 +5,7 @@
  * @group media
  * @group upload
  */
-class Tests_Image_Size extends WP_UnitTestCase {
+class Tests_Image_Size extends WP_UnitTestCase_Base {
 
 	function test_constrain_dims_zero() {
 		// No constraint - should have no effect.

@@ -3,7 +3,7 @@
 /**
  * @group https-migration
  */
-class Tests_HTTPS_Migration extends WP_UnitTestCase {
+class Tests_HTTPS_Migration extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 51437

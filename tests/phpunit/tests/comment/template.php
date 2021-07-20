@@ -2,7 +2,7 @@
 /**
  * @group comment
  */
-class Tests_Comment_Template extends WP_UnitTestCase {
+class Tests_Comment_Template extends WP_UnitTestCase_Base {
 	/**
 	 * Shared post ID.
 	 *

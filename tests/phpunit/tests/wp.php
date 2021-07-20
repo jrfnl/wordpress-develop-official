@@ -3,7 +3,7 @@
 /**
  * @group wp
  */
-class Tests_WP extends WP_UnitTestCase {
+class Tests_WP extends WP_UnitTestCase_Base {
 	/**
 	 * @var WP
 	 */

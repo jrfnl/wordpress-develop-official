@@ -4,7 +4,7 @@
  * @group functions.php
  * @covers ::get_weekstartend
  */
-class Tests_Functions_GetWeekstartend extends WP_UnitTestCase {
+class Tests_Functions_GetWeekstartend extends WP_UnitTestCase_Base {
 
 	public function test_default_start_of_week_option_is_monday() {
 		$expected = array(

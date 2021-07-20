@@ -4,7 +4,7 @@
  * @group l10n
  * @group i18n
  */
-class Tests_L10n_LoadScriptTextdomain extends WP_UnitTestCase {
+class Tests_L10n_LoadScriptTextdomain extends WP_UnitTestCase_Base {
 
 	/**
 	 * @ticket 45528
