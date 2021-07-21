@@ -3169,6 +3169,10 @@ function wp_rel_ugc( $text ) {
  * @return string Converted content.
  */
 function wp_targeted_link_rel( $text ) {
+	if ( ! is_string( $text ) || '' === $text ) {
+		return $text;
+	}
+
 	// Don't run (more expensive) regex if no links with targets.
 	if ( stripos( $text, 'target' ) === false || stripos( $text, '<a ' ) === false || is_serialized( $text ) ) {
 		return $text;
