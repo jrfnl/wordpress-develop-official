@@ -2137,8 +2137,10 @@ function sanitize_user( $username, $strict = false ) {
  */
 function sanitize_key( $key ) {
 	$raw_key = $key;
-	$key     = strtolower( $key );
-	$key     = preg_replace( '/[^a-z0-9_\-]/', '', $key );
+	if ( is_string( $key ) && '' !== $key ) {
+		$key = strtolower( $key );
+		$key = preg_replace( '/[^a-z0-9_\-]/', '', $key );
+	}
 
 	/**
 	 * Filters a sanitized key string.
