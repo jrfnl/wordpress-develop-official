@@ -3776,6 +3776,11 @@ function set_url_scheme( $url, $scheme = null ) {
 		$scheme = is_ssl() ? 'https' : 'http';
 	}
 
+	if ( ! is_string ( $url ) || '' === $url ) {
+		_doing_it_wrong( __FUNCTION__, 'The $url should be a non-empty string', '5.9.0');
+		$url = (string) $url;
+	}
+
 	$url = trim( $url );
 	if ( substr( $url, 0, 2 ) === '//' ) {
 		$url = 'http:' . $url;
