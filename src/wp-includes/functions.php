@@ -4506,8 +4506,10 @@ function wp_parse_args( $args, $defaults = array() ) {
 		$parsed_args = get_object_vars( $args );
 	} elseif ( is_array( $args ) ) {
 		$parsed_args =& $args;
-	} else {
+	} elseif ( is_string( $args ) ) {
 		wp_parse_str( $args, $parsed_args );
+	} else {
+		$parsed_args = array();
 	}
 
 	if ( is_array( $defaults ) && $defaults ) {
