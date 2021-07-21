@@ -1993,6 +1993,10 @@ function _wp_kses_decode_entities_chr_hexdec( $match ) {
  * @return string Filtered content.
  */
 function wp_filter_kses( $data ) {
+	if ( ! is_string( $data ) || '' === $data ) {
+		return $data;
+	}
+
 	return addslashes( wp_kses( stripslashes( $data ), current_filter() ) );
 }
 
@@ -2024,6 +2028,10 @@ function wp_kses_data( $data ) {
  * @return string Filtered post content with allowed HTML tags and attributes intact.
  */
 function wp_filter_post_kses( $data ) {
+	if ( ! is_string( $data ) || '' === $data ) {
+		return $data;
+	}
+
 	return addslashes( wp_kses( stripslashes( $data ), 'post' ) );
 }
 
@@ -2070,6 +2078,10 @@ function wp_kses_post_deep( $data ) {
  * @return string Filtered content without any HTML.
  */
 function wp_filter_nohtml_kses( $data ) {
+	if ( ! is_string( $data ) || '' === $data ) {
+		return $data;
+	}
+
 	return addslashes( wp_kses( stripslashes( $data ), 'strip' ) );
 }
 
