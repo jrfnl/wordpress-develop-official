@@ -361,7 +361,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 				$data = '';
 			}
 			elseif (!is_string($data)) {
-				$data = http_build_query($data, null, '&');
+				$data = http_build_query($data, '', '&');
 			}
 		}
 
@@ -546,7 +546,7 @@ class Requests_Transport_cURL implements Requests_Transport {
 				$query = $url_parts['query'];
 			}
 
-			$query .= '&' . http_build_query($data, null, '&');
+			$query .= '&' . http_build_query($data, '', '&');
 			$query  = trim($query, '&');
 
 			if (empty($url_parts['query'])) {
