@@ -894,7 +894,12 @@ abstract class WP_UnitTestCase_Base extends PHPUnit_Adapter_TestCase {
 	 * @since 3.5.0
 	 * @deprecated 5.9.0 This function hasn't been functional since PHPUnit 7.0.
 	 */
-	protected function checkRequirements() {}
+	protected function checkRequirements() {
+		// For PHPUnit 5/6 as we're overloading a public PHPUnit native method in those versions.
+		if ( is_callable( 'PHPUnit\Framework\TestCase', 'checkRequirements' ) ) {
+			parent::checkRequirements();
+		}
+	}
 
 	/**
 	 * Skips the current test if there is an open Trac ticket associated with it.
