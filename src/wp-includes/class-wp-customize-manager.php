@@ -4667,12 +4667,12 @@ final class WP_Customize_Manager {
 	public function get_return_url() {
 		global $_registered_pages;
 
-		$referer                    = wp_get_referer();
+		$referer                    = wp_get_referer(); // Can return false or via wp_validate_redirect potentially a URL without trailing slash
 		$excluded_referer_basenames = array( 'customize.php', 'wp-login.php' );
 
 		if ( $this->return_url ) {
 			$return_url = $this->return_url;
-		} elseif ( $referer && ! in_array( wp_basename( parse_url( $referer, PHP_URL_PATH ) ), $excluded_referer_basenames, true ) ) {
+		} elseif ( $referer && ! in_array( wp_basename( parse_url( $referer, PHP_URL_PATH ) ), $excluded_referer_basenames, true ) ) { // DANGER
 			$return_url = $referer;
 		} elseif ( $this->preview_url ) {
 			$return_url = $this->preview_url;
@@ -4680,8 +4680,10 @@ final class WP_Customize_Manager {
 			$return_url = home_url( '/' );
 		}
 
-		$return_url_basename = wp_basename( parse_url( $this->return_url, PHP_URL_PATH ) );
-		$return_url_query    = parse_url( $this->return_url, PHP_URL_QUERY );
+// Now why is $this->return_url being used here ? Instead of the above created $return_url ???
+// $this->return_url may still be falsey and no check is done for this here....
+		$return_url_basename = wp_basename( parse_url( $this->return_url, PHP_URL_PATH ) ); // Might be null when passed to wp_basename which calls urlencode
+		$return_url_query    = parse_url( $this->return_url, PHP_URL_QUERY ); // Might be null
 
 		if ( 'themes.php' === $return_url_basename && $return_url_query ) {
 			parse_str( $return_url_query, $query_vars );
