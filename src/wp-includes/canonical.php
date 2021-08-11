@@ -111,7 +111,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 				array( 'p', 'page_id', 'attachment_id', 'pagename', 'name', 'post_type', 'feed' ),
 				$redirect_url
 			);
-
+// Might be set to null now... ?
 			$redirect['path'] = parse_url( $redirect_url, PHP_URL_PATH );
 		}
 	}
@@ -203,6 +203,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 				$redirect_url = get_permalink( $post_id );
 				$redirect_obj = get_post( $post_id );
 
+ // DANGER ? Also ARGH... this shouldn't use rtrim(
 				$redirect['path']  = rtrim( $redirect['path'], (int) get_query_var( 'page' ) . '/' );
 				$redirect['query'] = remove_query_arg( 'page', $redirect['query'] );
 			}
@@ -432,7 +433,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 			$paged = get_query_var( 'paged' );
 			$feed  = get_query_var( 'feed' );
 			$cpage = get_query_var( 'cpage' );
-
+// DANGER ? (whole block)
 			while ( preg_match( "#/$wp_rewrite->pagination_base/?[0-9]+?(/+)?$#", $redirect['path'] )
 				|| preg_match( '#/(comments/?)?(feed|rss2?|rdf|atom)(/+)?$#', $redirect['path'] )
 				|| preg_match( "#/{$wp_rewrite->comments_pagination_base}-[0-9]+(/+)?$#", $redirect['path'] )
@@ -473,7 +474,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 					'wp-rss.php'          => 'rss2',
 					'wp-rss2.php'         => 'rss2',
 				);
-
+// Again danger x2
 				if ( isset( $old_feed_files[ basename( $redirect['path'] ) ] ) ) {
 					$redirect_url = get_feed_link( $old_feed_files[ basename( $redirect['path'] ) ] );
 
@@ -511,23 +512,27 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 			}
 
 			// Strip off trailing /index.php/.
+// More danger
 			$redirect['path'] = preg_replace( '|/' . preg_quote( $wp_rewrite->index, '|' ) . '/?$|', '/', $redirect['path'] );
 			$redirect['path'] = user_trailingslashit( $redirect['path'] );
 
 			if ( ! empty( $addl_path )
 				&& $wp_rewrite->using_index_permalinks()
+// And another one
 				&& strpos( $redirect['path'], '/' . $wp_rewrite->index . '/' ) === false
 			) {
+// Yup, here too
 				$redirect['path'] = trailingslashit( $redirect['path'] ) . $wp_rewrite->index . '/';
 			}
 
 			if ( ! empty( $addl_path ) ) {
+// And here
 				$redirect['path'] = trailingslashit( $redirect['path'] ) . $addl_path;
 			}
 
 			$redirect_url = $redirect['scheme'] . '://' . $redirect['host'] . $redirect['path'];
 		}
-
+// And another...
 		if ( 'wp-register.php' === basename( $redirect['path'] ) ) {
 			if ( is_multisite() ) {
 				/** This filter is documented in wp-login.php */
@@ -587,6 +592,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 	}
 
 	// Trailing /index.php.
+// And another
 	$redirect['path'] = preg_replace( '|/' . preg_quote( $wp_rewrite->index, '|' ) . '/*?$|', '/', $redirect['path'] );
 
 	$punctuation_pattern = implode(
@@ -623,6 +629,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 	);
 
 	// Remove trailing spaces and end punctuation from the path.
+// Yet again
 	$redirect['path'] = preg_replace( "#($punctuation_pattern)+$#", '', $redirect['path'] );
 
 	if ( ! empty( $redirect['query'] ) ) {
@@ -641,6 +648,7 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 
 	// Strip /index.php/ when we're not using PATHINFO permalinks.
 	if ( ! $wp_rewrite->using_index_permalinks() ) {
+// Still going strong
 		$redirect['path'] = str_replace( '/' . $wp_rewrite->index . '/', '/', $redirect['path'] );
 	}
 
@@ -661,9 +669,10 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 				}
 			}
 		}
-
+// More danger
 		$redirect['path'] = user_trailingslashit( $redirect['path'], $user_ts_type );
 	} elseif ( is_front_page() ) {
+// More danger
 		$redirect['path'] = trailingslashit( $redirect['path'] );
 	}
 
@@ -671,15 +680,18 @@ function redirect_canonical( $requested_url = null, $do_redirect = true ) {
 	if ( is_robots()
 		|| ! empty( get_query_var( 'sitemap' ) ) || ! empty( get_query_var( 'sitemap-stylesheet' ) )
 	) {
+// And yet more
 		$redirect['path'] = untrailingslashit( $redirect['path'] );
 	}
 
 	// Strip multiple slashes out of the URL.
 	if ( strpos( $redirect['path'], '//' ) > -1 ) {
+// and more
 		$redirect['path'] = preg_replace( '|/+|', '/', $redirect['path'] );
 	}
 
 	// Always trailing slash the Front Page URL.
+// Two more, this line and below
 	if ( trailingslashit( $redirect['path'] ) === trailingslashit( $user_home['path'] ) ) {
 		$redirect['path'] = trailingslashit( $redirect['path'] );
 	}
