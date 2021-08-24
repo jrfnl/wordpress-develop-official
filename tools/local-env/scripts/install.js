@@ -66,7 +66,7 @@ function install_wp_importer() {
  * Installs the Composer package dependancies.
  */
 function install_composer_dependancies() {
-	execSync( `docker-compose exec -T php composer update`, { stdio: 'inherit' } );
+	execSync( `docker-compose run --rm php composer update`, { stdio: 'inherit' } );
 }
 
 /**
