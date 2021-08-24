@@ -22,6 +22,10 @@ renameSync( 'src/wp-config.php', 'wp-config.php' );
 
 install_wp_importer();
 
+install_composer_dependancies();
+
+wp_cli_info();
+
 // Read in wp-tests-config-sample.php, edit it to work with our config, then write it to wp-tests-config.php.
 const testConfig = readFileSync( 'wp-tests-config-sample.php', 'utf8' )
 	.replace( 'youremptytestdbnamehere', 'wordpress_develop_tests' )
@@ -56,4 +60,18 @@ function install_wp_importer() {
 
 	execSync( `docker-compose exec -T php rm -rf ${testPluginDirectory}`, { stdio: 'inherit' } );
 	execSync( `docker-compose exec -T php git clone https://github.com/WordPress/wordpress-importer.git ${testPluginDirectory} --depth=1`, { stdio: 'inherit' } );
+}
+
+/**
+ * Installs the Composer package dependancies.
+ */
+function install_composer_dependancies() {
+	execSync( `docker-compose exec -T php composer update`, { stdio: 'inherit' } );
+}
+
+/**
+ * Get the environment information.
+ */
+function wp_cli_info() {
+	wp_cli( `cli info` );
 }
