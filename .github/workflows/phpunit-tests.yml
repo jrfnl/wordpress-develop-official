@@ -2,14 +2,14 @@ name: PHPUnit Tests
 
 on:
   push:
-    branches:
-      - master
-      - trunk
-      - '3.[7-9]'
-      - '[4-9].[0-9]'
-    tags:
-      - '3.[7-9]*'
-      - '[4-9].[0-9]*'
+#    branches:
+#      - master
+#      - trunk
+#      - '3.[7-9]'
+#      - '[4-9].[0-9]'
+#    tags:
+#      - '3.[7-9]*'
+#      - '[4-9].[0-9]*'
   pull_request:
     branches:
       - master
@@ -36,7 +36,7 @@ jobs:
   setup-workflow:
     name: Setup Workflow
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
+#    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
 
     steps:
       - name: Cancel previous runs of this workflow (pull requests only)
@@ -69,11 +69,11 @@ jobs:
   test-php:
     name: ${{ matrix.php }}${{ matrix.multisite && ' multisite' || '' }}${{ matrix.split_slow && ' slow tests' || '' }} ${{ matrix.memcached && ' with memcached' || '' }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
+#    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
     strategy:
       fail-fast: false
       matrix:
-        php: [ '5.6', '7.0', '7.1', '7.2', '7.3', '7.4' ]
+        php: [ '5.6', '7.0', '7.1' ]
         os: [ ubuntu-latest ]
         memcached: [ false ]
         split_slow: [ false ]
@@ -90,21 +90,7 @@ jobs:
             memcached: false
             multisite: true
             split_slow: true
-          # Include jobs for PHP 7.4 with memcached.
-          - php: '7.4'
-            os: ubuntu-latest
-            memcached: true
-            multisite: false
-          - php: '7.4'
-            os: ubuntu-latest
-            memcached: true
-            multisite: true
-          # Report the results of the PHP 7.4 without memcached job.
-          - php: '7.4'
-            os: ubuntu-latest
-            memcached: false
-            multisite: false
-            report: true
+
     env:
       LOCAL_PHP: ${{ matrix.php }}-fpm
       LOCAL_PHP_MEMCACHED: ${{ matrix.memcached }}
