@@ -148,6 +148,23 @@ jobs:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-php-${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
 
+      - name: Docker debug information
+        run: |
+          docker -v
+          docker-compose -v
+
+      - name: Start Docker environment
+        run: |
+          npm run env:start
+
+      - name: WordPress Docker container debug information
+        run: |
+          docker-compose run --rm mysql mysql --version
+          docker-compose run --rm php php --version
+          docker-compose run --rm php php -m
+          docker-compose run --rm php php -i
+          docker-compose run --rm php locale -a
+
       - name: Install Composer dependencies
         run: |
           if [ ${{ env.LOCAL_PHP }} == '7.1-fpm' ]; then
