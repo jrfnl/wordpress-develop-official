@@ -2,13 +2,13 @@ name: PHPUnit Tests
 
 on:
   push:
-    branches:
-      - trunk
-      - '3.[7-9]'
-      - '[4-9].[0-9]'
-    tags:
-      - '3.[7-9]*'
-      - '[4-9].[0-9]*'
+#    branches:
+#      - trunk
+#      - '3.[7-9]'
+#      - '[4-9].[0-9]'
+#    tags:
+#      - '3.[7-9]*'
+#      - '[4-9].[0-9]*'
   pull_request:
     branches:
       - trunk
@@ -61,7 +61,7 @@ jobs:
     name: ${{ matrix.php }}${{ matrix.multisite && ' multisite' || '' }}${{ matrix.split_slow && ' slow tests' || '' }}${{ matrix.memcached && ' with memcached' || '' }} on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
-    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
+#    if: ${{ github.repository == 'WordPress/wordpress-develop' || github.event_name == 'pull_request' }}
     strategy:
       fail-fast: false
       matrix:
