@@ -9,11 +9,15 @@
 /**
  * Class representing a parsed instance of a block.
  *
+ * {@internal Do NOT remove the stdClass extension. It allows for
+ * the convoluted use of a dynamic property in this class until this
+ * class has been refactored.}
+ *
  * @since 5.5.0
  * @property array $attributes
  */
 #[AllowDynamicProperties]
-class WP_Block {
+class WP_Block extends stdClass {
 
 	/**
 	 * Original parsed array representation of block.
