@@ -10,12 +10,16 @@
 /**
  * Core class used to implement the WP_Term object.
  *
+ * {@internal Do NOT remove the stdClass extension. It allows for
+ * the convoluted use of a dynamic property in this class until the
+ * use of dynamic properties has been analyzed in a deep dive.}
+ *
  * @since 4.4.0
  *
  * @property-read object $data Sanitized term data.
  */
 #[AllowDynamicProperties]
-final class WP_Term {
+final class WP_Term extends stdClass {
 
 	/**
 	 * Term ID.
