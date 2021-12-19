@@ -15,7 +15,7 @@
  * @see register_block_type()
  */
 #[AllowDynamicProperties]
-class WP_Block_Type {
+class WP_Block_Type extends stdClass {
 
 	/**
 	 * Block API version.
