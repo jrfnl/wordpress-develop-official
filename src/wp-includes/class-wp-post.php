@@ -19,7 +19,7 @@
  * @property-read string[] $tags_input
  */
 #[AllowDynamicProperties]
-final class WP_Post {
+final class WP_Post extends stdClass {
 
 	/**
 	 * Post ID.
