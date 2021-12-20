@@ -23,7 +23,7 @@
  * @property string $home
  */
 #[AllowDynamicProperties]
-final class WP_Site {
+final class WP_Site extends stdClass {
 
 	/**
 	 * Site ID.
