@@ -728,6 +728,19 @@ class wpdb {
 	public $error = null;
 
 	/**
+	 * Declared private/protected properties which should remain accessible via the magic methods for BC reasons.
+	 *
+	 * @since 6.1.0
+	 *
+	 * @var array<string, bool> Key is the property name, value whether setting the property is allowed.
+	 */
+	private $compat_accessible_props = array(
+		'check_current_query' => false,
+		'col_meta'            => false,
+		'table_charset'       => false,
+	);
+
+	/**
 	 * Connects to the database server and selects a database.
 	 *
 	 * Does the actual setting up
@@ -794,12 +807,7 @@ class wpdb {
 	 * @param mixed  $value The value to set.
 	 */
 	public function __set( $name, $value ) {
-		$protected_members = array(
-			'col_meta',
-			'table_charset',
-			'check_current_query',
-		);
-		if ( in_array( $name, $protected_members, true ) ) {
+		if ( isset( $this->compat_accessible_props[ $name ] ) && false === $this->compat_accessible_props[ $name ] ) {
 			return;
 		}
 		$this->$name = $value;
@@ -825,6 +833,9 @@ class wpdb {
 	 * @param string $name  The private member to unset
 	 */
 	public function __unset( $name ) {
+		if ( isset( $this->compat_accessible_props[ $name ] ) && false === $this->compat_accessible_props[ $name ] ) {
+			return;
+		}
 		unset( $this->$name );
 	}
 

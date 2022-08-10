@@ -168,7 +168,6 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 	 * @ticket 56034
 	 *
 	 * @dataProvider data_magic_methods_declared_settable_properties
-	 * @dataProvider data_magic_methods_declared_non_settable_properties
 	 *
 	 * @param string $name Property name.
 	 */
@@ -280,6 +279,31 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 		// Attempt to overwrite the property value and verify that this fails.
 		$obj->$name = self::TEST_VALUE_1;
 		$this->assertSame( $default, $obj->$name, 'Property has been assigned a new value' );
+	}
+
+	/**
+	 * Verify that select declared properties cannot be unset.
+	 *
+	 * Also note that as this test expects an error message, it cannot be combined with the
+	 * test for the other magic methods.
+	 *
+	 * @ticket 56034
+	 *
+	 * @dataProvider data_magic_methods_declared_non_settable_properties
+	 *
+	 * @param string $name    Property name.
+	 * @param mixed  $default Default value for the property.
+	 */
+	public function test_magic_unset_declared_properties_non_settable( $name, $default ) {
+		$obj = $this->get_clean_wpdb();
+
+		// Verify initial state. Note: each of these properties has a default value.
+		$this->assertTrue( isset( $obj->$name ), 'Unexpected initial state' );
+
+		// Unset the property value and verify the new state.
+		unset( $obj->$name );
+		$this->assertTrue( isset( $obj->$name ), 'Unsetting the property succeeded' );
+		$this->assertSame( $default, $obj->$name, 'Property has been unset' );
 	}
 
 	/**
