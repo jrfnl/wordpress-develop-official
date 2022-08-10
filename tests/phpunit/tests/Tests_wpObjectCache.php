@@ -244,4 +244,102 @@ final class Tests_wpObjectCache extends WP_UnitTestCase {
 
 		$unused = $obj->$name;
 	}
+
+	/**
+	 * Verify that using `isset()` on inaccessible, declared properties always returns `false`.
+	 *
+	 * @ticket 56034
+	 *
+	 * @covers       WP_Object_Cache::__isset
+	 * @dataProvider data_magic_methods_declared_inaccessible_properties
+	 *
+	 * @param string $name Property name.
+	 */
+	public function test_magic_isset_inaccessible_property( $name ) {
+		$obj = new WP_Object_Cache();
+		$this->assertFalse( isset( $obj->$name ) );
+	}
+
+	/**
+	 * Verify that any attempt to retrieve the value of an inaccessible, declared property will result
+	 * in an exception being thrown.
+	 *
+	 * @ticket 56034
+	 *
+	 * @covers       WP_Object_Cache::__get
+	 * @dataProvider data_magic_methods_declared_inaccessible_properties
+	 *
+	 * @param string $name Property name.
+	 */
+	public function test_magic_get_inaccessible_property( $name ) {
+		$this->expectException( OutOfBoundsException::class );
+		$this->expectExceptionMessage( 'Inaccessible property: WP_Object_Cache::$' . $name );
+
+		$obj    = new WP_Object_Cache();
+		$unused = $obj->$name;
+	}
+
+	/**
+	 * Verify that attempting to write to an inaccessible, declared property will fail with an exception being thrown.
+	 *
+	 * @ticket 56034
+	 *
+	 * @covers       WP_Object_Cache::__set
+	 * @dataProvider data_magic_methods_declared_inaccessible_properties
+	 *
+	 * @param string $name Property name.
+	 */
+	public function test_magic_set_inaccessible_property( $name ) {
+		$this->expectException( OutOfBoundsException::class );
+		$this->expectExceptionMessage( 'Inaccessible property WP_Object_Cache::$' . $name . ' cannot be set' );
+
+		$obj        = new WP_Object_Cache();
+		$obj->$name = self::TEST_VALUE_1;
+	}
+
+	/**
+	 * Verify that attempting to unset an inaccessible, declared property will fail.
+	 *
+	 * @ticket 56034
+	 *
+	 * @covers       WP_Object_Cache::__unset
+	 * @dataProvider data_magic_methods_declared_inaccessible_properties
+	 *
+	 * @param string $name Property name.
+	 */
+	public function test_magic_unset_inaccessible_property( $name ) {
+		$obj = new WP_Object_Cache();
+		unset( $obj->$name );
+
+		// Verify that the property value was not changed.
+		$refl_prop = new ReflectionProperty( $obj, $name );
+		$refl_prop->setAccessible( true );
+		if ( method_exists( $refl_prop, 'getDefaultValue' ) ) {
+			// PHP 8.0+.
+			$default_value = $refl_prop->getDefaultValue();
+		} else {
+			// PHP < 8.0.
+			$all_properties = $refl_prop->getDeclaringClass()->getDefaultProperties();
+			$default_value  = null;
+			if ( isset( $all_properties[ $name ] ) ) {
+				$default_value = $all_properties[ $name ];
+			}
+		}
+		$current_value = $refl_prop->getValue( $obj );
+		$refl_prop->setAccessible( false );
+
+		$this->assertSame( $default_value, $current_value );
+	}
+
+	/**
+	 * Data provider.
+	 *
+	 * @return array
+	 */
+	public function data_magic_methods_declared_inaccessible_properties() {
+		return array(
+			'Declared private property: $arbitrary_props' => array( 'arbitrary_props' ),
+			'Declared private property: $compat_accessible_props' => array( 'compat_accessible_props' ),
+		);
+	}
 }
