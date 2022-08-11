@@ -495,7 +495,7 @@ class WP_Text_Diff_Renderer_Table extends Text_Diff_Renderer {
 	}
 
 	/**
-	 * Make private properties readable for backward compatibility.
+	 * Make private/protected properties readable for backward compatibility.
 	 *
 	 * @since 4.0.0
 	 *
@@ -506,25 +506,27 @@ class WP_Text_Diff_Renderer_Table extends Text_Diff_Renderer {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
 			return $this->$name;
 		}
+
+		return null;
 	}
 
 	/**
-	 * Make private properties settable for backward compatibility.
+	 * Make private/protected properties settable for backward compatibility.
 	 *
 	 * @since 4.0.0
+	 * @since 6.1.0 This method does not return anything anymore.
 	 *
 	 * @param string $name  Property to check if set.
 	 * @param mixed  $value Property value.
-	 * @return mixed Newly-set property.
 	 */
 	public function __set( $name, $value ) {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
-			return $this->$name = $value;
+			$this->$name = $value;
 		}
 	}
 
 	/**
-	 * Make private properties checkable for backward compatibility.
+	 * Make private/protected properties checkable for backward compatibility.
 	 *
 	 * @since 4.0.0
 	 *
@@ -535,10 +537,12 @@ class WP_Text_Diff_Renderer_Table extends Text_Diff_Renderer {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
 			return isset( $this->$name );
 		}
+
+		return false;
 	}
 
 	/**
-	 * Make private properties un-settable for backward compatibility.
+	 * Make private/protected properties un-settable for backward compatibility.
 	 *
 	 * @since 4.0.0
 	 *
