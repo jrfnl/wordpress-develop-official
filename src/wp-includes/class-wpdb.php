@@ -728,6 +728,15 @@ class wpdb {
 	public $error = null;
 
 	/**
+	 * Storage for arbitrary dynamically set properties.
+	 *
+	 * @since 6.1.0
+	 *
+	 * @var array<string, mixed>
+	 */
+	private $arbitrary_props = array();
+
+	/**
 	 * Declared private/protected properties which should remain accessible via the magic methods for BC reasons.
 	 *
 	 * @since 6.1.0
@@ -736,8 +745,20 @@ class wpdb {
 	 */
 	private $compat_accessible_props = array(
 		'check_current_query' => false,
+		'checking_collation'  => true,
+		'col_info'            => true,
 		'col_meta'            => false,
+		'dbh'                 => true,
+		'dbhost'              => true,
+		'dbname'              => true,
+		'dbpassword'          => true,
+		'dbuser'              => true,
+		'has_connected'       => true,
+		'incompatible_modes'  => true,
+		'reconnect_retries'   => true,
+		'result'              => true,
 		'table_charset'       => false,
+		'use_mysqli'          => true,
 	);
 
 	/**
@@ -783,60 +804,140 @@ class wpdb {
 	}
 
 	/**
-	 * Makes private properties readable for backward compatibility.
+	 * Makes private/protected properties readable for backward compatibility.
+	 *
+	 * {@internal As the original implementation of this set of methods contained no safeguard
+	 * against undeclared properties being retrievied/set/etc, explicit support for this
+	 * has been added in a PHP >= 8.2 compatible manner.
+	 * This is NOT a good example of how magic methods _should_ be implemented!}
 	 *
 	 * @since 3.5.0
 	 *
-	 * @param string $name The private member to get, and optionally process.
-	 * @return mixed The private member.
+	 * @param string $name The private/protected member to get, and optionally process.
+	 * @return mixed The private/protected member.
+	 *
+	 * @throws OutOfBoundsException When an attempt is made to retrieve the value of a truly inaccessible property.
 	 */
 	public function __get( $name ) {
 		if ( 'col_info' === $name ) {
 			$this->load_col_info();
 		}
 
-		return $this->$name;
+		// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
+		if ( property_exists( $this, $name ) && ! isset( $this->compat_accessible_props[ $name ] ) ) {
+			throw new OutOfBoundsException( 'Inaccessible property: ' . self::class . '::$' . $name );
+		}
+
+		// Handle declared private/protected properties.
+		if ( property_exists( $this, $name ) ) {
+			return $this->$name;
+		}
+
+		// Handle undeclared properties.
+		if ( array_key_exists( $name, $this->arbitrary_props ) ) {
+			return $this->arbitrary_props[ $name ];
+		}
+
+		// Maintain PHP native behaviour for undeclared properties.
+		trigger_error( 'Undefined property: ' . self::class . '::$' . $name, E_USER_WARNING );
+		return null;
 	}
 
 	/**
-	 * Makes private properties settable for backward compatibility.
+	 * Makes private/protected properties settable for backward compatibility.
+	 *
+	 * {@internal As the original implementation of this set of methods contained no safeguard
+	 * against undeclared properties being retrievied/set/etc, explicit support for this
+	 * has been added in a PHP >= 8.2 compatible manner.
+	 * This is NOT a good example of how magic methods _should_ be implemented!}
 	 *
 	 * @since 3.5.0
 	 *
-	 * @param string $name  The private member to set.
+	 * @param string $name  The private/protected member to set.
 	 * @param mixed  $value The value to set.
+	 *
+	 * @throws OutOfBoundsException When an attempt is made to retrieve the value of a truly inaccessible property.
 	 */
 	public function __set( $name, $value ) {
-		if ( isset( $this->compat_accessible_props[ $name ] ) && false === $this->compat_accessible_props[ $name ] ) {
+		// Handle declared private/protected properties.
+		if ( property_exists( $this, $name ) ) {
+			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
+			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
+				throw new OutOfBoundsException( 'Inaccessible property ' . self::class . '::$' . $name . ' cannot be set' );
+			}
+
+			// Silently ignore set requests for select private/protected properties.
+			if ( isset( $this->compat_accessible_props[ $name ] ) && false === $this->compat_accessible_props[ $name ] ) {
+				return;
+			}
+
+			// Old property accessible for BC-compat reasons.
+			$this->$name = $value;
 			return;
 		}
-		$this->$name = $value;
+
+		// Handle undeclared properties.
+		$this->arbitrary_props[ $name ] = $value;
 	}
 
 	/**
-	 * Makes private properties check-able for backward compatibility.
+	 * Makes private/protected properties check-able for backward compatibility.
+	 *
+	 * {@internal As the original implementation of this set of methods contained no safeguard
+	 * against undeclared properties being retrievied/set/etc, explicit support for this
+	 * has been added in a PHP >= 8.2 compatible manner.
+	 * This is NOT a good example of how magic methods _should_ be implemented!}
 	 *
 	 * @since 3.5.0
 	 *
-	 * @param string $name The private member to check.
+	 * @param string $name The private/protected member to check.
 	 * @return bool If the member is set or not.
 	 */
 	public function __isset( $name ) {
-		return isset( $this->$name );
+		// Handle declared private/protected properties.
+		if ( property_exists( $this, $name ) ) {
+			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
+			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
+				return false;
+			}
+
+			// Old property accessible for BC-compat reasons.
+			return isset( $this->$name );
+		}
+
+		// Handle undeclared properties.
+		return isset( $this->arbitrary_props[ $name ] );
 	}
 
 	/**
-	 * Makes private properties un-settable for backward compatibility.
+	 * Makes private/protected properties un-settable for backward compatibility.
+	 *
+	 * {@internal As the original implementation of this set of methods contained no safeguard
+	 * against undeclared properties being retrievied/set/etc, explicit support for this
+	 * has been added in a PHP >= 8.2 compatible manner.
+	 * This is NOT a good example of how magic methods _should_ be implemented!}
 	 *
 	 * @since 3.5.0
 	 *
-	 * @param string $name  The private member to unset
+	 * @param string $name The private/protected member to unset
 	 */
 	public function __unset( $name ) {
-		if ( isset( $this->compat_accessible_props[ $name ] ) && false === $this->compat_accessible_props[ $name ] ) {
+		// Handle declared private/protected properties.
+		if ( property_exists( $this, $name ) ) {
+			// Silently ignore unsets for inaccessible properties and select accessible properties.
+			if ( ! isset( $this->compat_accessible_props[ $name ] )
+				|| false === $this->compat_accessible_props[ $name ]
+			) {
+				return;
+			}
+
+			// Old property accessible for BC-compat reasons.
+			unset( $this->$name );
 			return;
 		}
-		unset( $this->$name );
+
+		// Handle undeclared properties.
+		unset( $this->arbitrary_props[ $name ] );
 	}
 
 	/**

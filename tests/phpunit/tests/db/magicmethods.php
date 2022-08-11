@@ -169,9 +169,11 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 	 *
 	 * @dataProvider data_magic_methods_declared_settable_properties
 	 *
-	 * @param string $name Property name.
+	 * @param string $name       Property name.
+	 * @param mixed  $default    Unused. Default value for the property.
+	 * @param string $visibility The visibility of the property.
 	 */
-	public function test_magic_unset_declared_properties( $name ) {
+	public function test_magic_unset_declared_properties( $name, $default = null, $visibility = 'protected' ) {
 		$obj = $this->get_clean_wpdb();
 
 		// Make sure the properties all have an initial value.
@@ -186,7 +188,7 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 
 		// Make sure that useful PHP native error messages aren't being hidden away by the magic methods.
 		$expected_msg = 'Undefined property: ';
-		if ( PHP_VERSION_ID > 80000 ) {
+		if ( PHP_VERSION_ID > 80000 || 'private' === $visibility ) {
 			$this->expectWarning();
 			$this->expectWarningMessage( $expected_msg );
 		} else {
@@ -230,16 +232,19 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 				'name' => 'result',
 			),
 			'Declared private property: $checking_collation' => array(
-				'name'    => 'checking_collation',
-				'default' => false,
+				'name'       => 'checking_collation',
+				'default'    => false,
+				'visibility' => 'private',
 			),
 			'Declared private property: $has_connected' => array(
-				'name'    => 'has_connected',
-				'default' => false,
+				'name'       => 'has_connected',
+				'default'    => false,
+				'visibility' => 'private',
 			),
 			'Declared private property: $use_mysqli'    => array(
-				'name'    => 'use_mysqli',
-				'default' => false,
+				'name'       => 'use_mysqli',
+				'default'    => false,
+				'visibility' => 'private',
 			),
 		);
 	}
@@ -397,14 +402,8 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 		$this->assertFalse( isset( $obj->$name ), 'Unsetting the property failed' );
 
 		// Make sure that useful PHP native error messages aren't being hidden away by the magic methods.
-		$expected_msg = 'Undefined property: ';
-		if ( PHP_VERSION_ID > 80000 ) {
-			$this->expectWarning();
-			$this->expectWarningMessage( $expected_msg );
-		} else {
-			$this->expectNotice();
-			$this->expectNoticeMessage( $expected_msg );
-		}
+		$this->expectWarning();
+		$this->expectWarningMessage( 'Undefined property: ' );
 
 		$unused = $obj->$name;
 	}
