@@ -1028,20 +1028,22 @@ class WP_User_Query {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
 			return $this->$name;
 		}
+
+		return null;
 	}
 
 	/**
 	 * Makes private properties settable for backward compatibility.
 	 *
 	 * @since 4.0.0
+	 * @since 6.1.0 This method does not return anything anymore.
 	 *
 	 * @param string $name  Property to check if set.
 	 * @param mixed  $value Property value.
-	 * @return mixed Newly-set property.
 	 */
 	public function __set( $name, $value ) {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
-			return $this->$name = $value;
+			$this->$name = $value;
 		}
 	}
 
@@ -1057,6 +1059,8 @@ class WP_User_Query {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
 			return isset( $this->$name );
 		}
+
+		return false;
 	}
 
 	/**
