@@ -236,14 +236,8 @@ final class Tests_wpObjectCache extends WP_UnitTestCase {
 		$this->assertFalse( isset( $obj->$name ), 'Unsetting the property failed' );
 
 		// Make sure that useful PHP native error messages aren't being hidden away by the magic methods.
-		$expected_msg = 'Undefined property: WP_Object_Cache::$';
-		if ( PHP_VERSION_ID > 80000 ) {
-			$this->expectWarning();
-			$this->expectWarningMessage( $expected_msg );
-		} else {
-			$this->expectNotice();
-			$this->expectNoticeMessage( $expected_msg );
-		}
+		$this->expectWarning();
+		$this->expectWarningMessage( 'Undefined property: WP_Object_Cache::$' );
 
 		$unused = $obj->$name;
 	}
