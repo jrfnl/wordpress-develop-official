@@ -2,8 +2,6 @@
 
 /**
  * @group admin
- *
- * @covers WP_List_Table
  */
 class Tests_Admin_WpListTable extends WP_UnitTestCase {
 
