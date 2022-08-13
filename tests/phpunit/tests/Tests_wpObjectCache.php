@@ -17,6 +17,61 @@ final class Tests_wpObjectCache extends WP_UnitTestCase {
 	const TEST_VALUE_2 = 12345;
 
 	/**
+	 * Verify that public properties are not affected by the changes made in the magic methods.
+	 *
+	 * @ticket 56034
+	 *
+	 * @coversNothing
+	 *
+	 * @dataProvider data_public_properties_are_not_affected_by_changes_in_magic_methods
+	 *
+	 * @param string $name    Property name.
+	 * @param mixed  $default Default value for the property.
+	 */
+	public function test_public_properties_are_not_affected_by_changes_in_magic_methods( $name, $default ) {
+		$obj = new WP_Object_Cache();
+
+		/*
+		 * Verify initial state.
+		 * Note: all public properties in this class have a default value.
+		 */
+		$this->assertTrue( isset( $obj->$name ), 'Unexpected initial state' );
+		$this->assertSame( $default, $obj->$name, 'Initial value does not match expectations' );
+
+		// Overwrite the property value and verify the new state.
+		$obj->$name = self::TEST_VALUE_1;
+		$this->assertTrue( isset( $obj->$name ), 'Setting the property failed [1]' );
+		$this->assertSame( self::TEST_VALUE_1, $obj->$name, 'Property has not been assigned the first value' );
+
+		// Unset the property and verify the new state.
+		unset( $obj->$name );
+		$this->assertFalse( isset( $obj->$name ), 'Unsetting the property failed' );
+
+		// Set the property again and verify the updated state.
+		$obj->$name = self::TEST_VALUE_2;
+		$this->assertTrue( isset( $obj->$name ), 'Setting the property failed [2]' );
+		$this->assertSame( self::TEST_VALUE_2, $obj->$name, 'Property has not been assigned the second value' );
+	}
+
+	/**
+	 * Data provider.
+	 *
+	 * @return array
+	 */
+	public function data_public_properties_are_not_affected_by_changes_in_magic_methods() {
+		return array(
+			'Declared public property: $cache_hits'   => array(
+				'name'    => 'cache_hits',
+				'default' => 0,
+			),
+			'Declared public property: $cache_misses' => array(
+				'name'    => 'cache_misses',
+				'default' => 0,
+			),
+		);
+	}
+
+	/**
 	 * Verify that the state of accessible declared properties can be checked and changed.
 	 *
 	 * Please take note that this test does not represent the _desired_ behaviour, but the behaviour
