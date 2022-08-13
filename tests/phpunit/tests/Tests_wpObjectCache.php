@@ -21,7 +21,10 @@ final class Tests_wpObjectCache extends WP_UnitTestCase {
 	 *
 	 * @ticket 56034
 	 *
-	 * @coversNothing
+	 * @covers WP_Object_Cache::__isset
+	 * @covers WP_Object_Cache::__get
+	 * @covers WP_Object_Cache::__set
+	 * @covers WP_Object_Cache::__unset
 	 *
 	 * @dataProvider data_public_properties_are_not_affected_by_changes_in_magic_methods
 	 *

@@ -121,13 +121,15 @@ class WP_Object_Cache {
 	 * @throws OutOfBoundsException When an attempt is made to retrieve the value of a truly inaccessible property.
 	 */
 	public function __get( $name ) {
-		// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-		if ( property_exists( $this, $name ) && isset( $this->compat_accessible_props[ $name ] ) === false ) {
-			throw new OutOfBoundsException( 'Inaccessible property: ' . self::class . '::$' . $name );
-		}
-
-		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
+			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
+			if ( ! isset( $this->compat_accessible_props[ $name ] )
+				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
+			) {
+				throw new OutOfBoundsException( 'Inaccessible property: ' . self::class . '::$' . $name );
+			}
+
+			// Handle declared private/protected properties and unset public properties.
 			return $this->$name;
 		}
 
@@ -161,11 +163,13 @@ class WP_Object_Cache {
 		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-			if ( isset( $this->compat_accessible_props[ $name ] ) === false ) {
+			if ( ! isset( $this->compat_accessible_props[ $name ] )
+				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
+			) {
 				throw new OutOfBoundsException( 'Inaccessible property ' . self::class . '::$' . $name . ' cannot be set' );
 			}
 
-			// Old property accessible for BC-compat reasons.
+			// Old property accessible for BC-compat reasons or previously unset public property.
 			$this->$name = $value;
 			return;
 		}
@@ -191,7 +195,7 @@ class WP_Object_Cache {
 		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-			if ( isset( $this->compat_accessible_props[ $name ] ) === false ) {
+			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
 				return false;
 			}
 
@@ -219,7 +223,7 @@ class WP_Object_Cache {
 		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
 			// Silently ignore unsets for inaccessible properties.
-			if ( isset( $this->compat_accessible_props[ $name ] ) === false ) {
+			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
 				return;
 			}
 
