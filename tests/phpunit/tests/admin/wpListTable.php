@@ -6,6 +6,13 @@
 class Tests_Admin_WpListTable extends WP_UnitTestCase {
 
 	/**
+	 * Dummy screen name.
+	 *
+	 * @var string
+	 */
+	const HOOK_SUFFIX = 'my-hook';
+
+	/**
 	 * List table.
 	 *
 	 * @var WP_List_Table $list_table
@@ -21,6 +28,27 @@ class Tests_Admin_WpListTable extends WP_UnitTestCase {
 
 		$hook_suffix      = '_wp_tests';
 		self::$list_table = new WP_List_Table();
+	}
+
+	/**
+	 * Set prerequisite.
+	 */
+	public function set_up() {
+		parent::set_up();
+
+		/*
+		 * Set a dummy value for the current screen in the admin to prevent
+		 * `_get_list_table()` throwing.
+		 */
+		$GLOBALS['hook_suffix'] = self::HOOK_SUFFIX;
+	}
+
+	/**
+	 * Reset to default state.
+	 */
+	public function tear_down() {
+		unset( $GLOBALS['hook_suffix'] );
+		parent::tear_down();
 	}
 
 	/**
@@ -41,12 +69,6 @@ class Tests_Admin_WpListTable extends WP_UnitTestCase {
 	public function test_should_only_add_primary_column_when_needed( $list_class, $headers, $expected, $expected_hook_count ) {
 		$hook = new MockAction();
 		add_filter( 'list_table_primary_column', array( $hook, 'filter' ) );
-
-		/*
-		 * Set a dummy value for the current screen in the admin to prevent
-		 * `_get_list_table()` throwing.
-		 */
-		$GLOBALS['hook_suffix'] = 'my-hook';
 
 		$list_table = _get_list_table( $list_class );
 
