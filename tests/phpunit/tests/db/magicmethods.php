@@ -48,8 +48,6 @@ final class Tests_DB_MagicMethods extends WP_UnitTestCase {
 	 *
 	 * @ticket 56034
 	 *
-	 * @coversNothing
-	 *
 	 * @dataProvider data_public_properties_are_not_affected_by_changes_in_magic_methods
 	 *
 	 * @param string $name    Property name.

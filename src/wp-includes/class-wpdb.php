@@ -822,14 +822,15 @@ class wpdb {
 		if ( 'col_info' === $name ) {
 			$this->load_col_info();
 		}
-
-		// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-		if ( property_exists( $this, $name ) && ! isset( $this->compat_accessible_props[ $name ] ) ) {
-			throw new OutOfBoundsException( 'Inaccessible property: ' . self::class . '::$' . $name );
-		}
-
-		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
+			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
+			if ( ! isset( $this->compat_accessible_props[ $name ] )
+				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
+			) {
+				throw new OutOfBoundsException( 'Inaccessible property: ' . self::class . '::$' . $name );
+			}
+
+			// Handle declared private/protected properties and unset public properties.
 			return $this->$name;
 		}
 
@@ -862,7 +863,9 @@ class wpdb {
 		// Handle declared private/protected properties.
 		if ( property_exists( $this, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
+			if ( ! isset( $this->compat_accessible_props[ $name ] )
+				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
+			) {
 				throw new OutOfBoundsException( 'Inaccessible property ' . self::class . '::$' . $name . ' cannot be set' );
 			}
 
@@ -871,7 +874,7 @@ class wpdb {
 				return;
 			}
 
-			// Old property accessible for BC-compat reasons.
+			// Old property accessible for BC-compat reasons or previously unset public property.
 			$this->$name = $value;
 			return;
 		}
