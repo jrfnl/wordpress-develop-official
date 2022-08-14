@@ -822,7 +822,7 @@ class wpdb {
 		if ( 'col_info' === $name ) {
 			$this->load_col_info();
 		}
-		if ( property_exists( $this, $name ) ) {
+		if ( property_exists( static::class, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
 			if ( ! isset( $this->compat_accessible_props[ $name ] )
 				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
@@ -860,13 +860,17 @@ class wpdb {
 	 * @throws OutOfBoundsException When an attempt is made to retrieve the value of a truly inaccessible property.
 	 */
 	public function __set( $name, $value ) {
-		// Handle declared private/protected properties.
-		if ( property_exists( $this, $name ) ) {
+		// Handle declared private/protected/public properties which are reachable from within the calling class.
+		if ( property_exists( static::class, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
-			if ( ! isset( $this->compat_accessible_props[ $name ] )
-				&& false === ( new ReflectionProperty( $this, $name ) )->isPublic()
-			) {
-				throw new OutOfBoundsException( 'Inaccessible property ' . self::class . '::$' . $name . ' cannot be set' );
+			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
+				$refl_prop = new ReflectionProperty( $this, $name );
+
+				if ( false === $refl_prop->isPublic()
+				|| (self::class !== static::class && false === $refl_prop->isProtected())
+				) {
+					throw new OutOfBoundsException( 'Inaccessible property ' . self::class . '::$' . $name . ' cannot be set' );
+				}
 			}
 
 			// Silently ignore set requests for select private/protected properties.
@@ -898,7 +902,7 @@ class wpdb {
 	 */
 	public function __isset( $name ) {
 		// Handle declared private/protected properties.
-		if ( property_exists( $this, $name ) ) {
+		if ( property_exists( static::class, $name ) ) {
 			// Handle private/protected properties declared in WP 6.1 or later. These should really not be accessible.
 			if ( ! isset( $this->compat_accessible_props[ $name ] ) ) {
 				return false;
@@ -926,7 +930,7 @@ class wpdb {
 	 */
 	public function __unset( $name ) {
 		// Handle declared private/protected properties.
-		if ( property_exists( $this, $name ) ) {
+		if ( property_exists( static::class, $name ) ) {
 			// Silently ignore unsets for inaccessible properties and select accessible properties.
 			if ( ! isset( $this->compat_accessible_props[ $name ] )
 				|| false === $this->compat_accessible_props[ $name ]
