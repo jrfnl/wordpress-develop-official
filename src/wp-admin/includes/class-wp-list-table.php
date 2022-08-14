@@ -173,6 +173,11 @@ class WP_List_Table {
 		}
 	}
 
+
+/* ==============
+Also note: potentially unset `public` properties can never be set again!
+Same for protected properties which are unset from a valid context.
+=============== */
 	/**
 	 * Make private/protected properties readable for backward compatibility.
 	 *
@@ -186,6 +191,7 @@ class WP_List_Table {
 			return $this->$name;
 		}
 
+		// Realistically, this should throw some sort of notice... Devs now don't get any notification that their get failed because it isn't allowed.
 		return null;
 	}
 
@@ -202,6 +208,8 @@ class WP_List_Table {
 		if ( in_array( $name, $this->compat_fields, true ) ) {
 			$this->$name = $value;
 		}
+
+		// Realistically, this should throw some sort of notice... Devs now don't get any notification that their set is being ignored.
 	}
 
 	/**
