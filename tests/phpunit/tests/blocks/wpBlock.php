@@ -604,13 +604,13 @@ class Tests_Blocks_wpBlock extends WP_UnitTestCase {
 			),
 		);
 		$block         = new WP_Block( $parsed_block, $context, $this->registry );
-		function filterQuery( $query, $block, $page ) {
+		function filter_the_query( $query, $block, $page ) {
 			$query['post_type'] = 'book';
 			return $query;
 		}
-		add_filter( 'query_loop_block_query_vars', 'filterQuery', 10, 3 );
+		add_filter( 'query_loop_block_query_vars', 'filter_the_query', 10, 3 );
 		$query = build_query_vars_from_query_block( $block, 1 );
-		remove_filter( 'query_loop_block_query_vars', 'filterQuery' );
+		remove_filter( 'query_loop_block_query_vars', 'filter_the_query' );
 		$this->assertSame(
 			$query,
 			array(
