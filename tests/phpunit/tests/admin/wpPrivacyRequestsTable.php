@@ -209,6 +209,11 @@ class Tests_Admin_wpPrivacyRequestsTable extends WP_UnitTestCase {
 			'all' => '<a href="http://example.org/wp-admin/export-personal-data.php" class="current" aria-current="page">All <span class="count">(0)</span></a>',
 		);
 
-		$this->assertSame( $expected, $this->get_mocked_class_instance()->get_views() );
+		$instance          = $this->get_mocked_class_instance();
+		$reflection_method = new ReflectionMethod( $instance, 'get_views' );
+		$reflection_method->setAccessible( true );
+		$actual = $reflection_method->invoke( $instance );
+
+		$this->assertSame( $expected, $actual );
 	}
 }

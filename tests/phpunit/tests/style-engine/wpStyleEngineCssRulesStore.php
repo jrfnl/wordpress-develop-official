@@ -31,6 +31,9 @@ class Tests_Style_Engine_wpStyleEngineCSSRulesStore extends WP_UnitTestCase {
 	 * @covers ::__construct
 	 */
 	public function test_should_create_new_store_on_instantiation() {
+		// Make sure no stores are pre-registered.
+		WP_Style_Engine_CSS_Rules_Store::remove_all_stores();
+
 		$new_pancakes_store = WP_Style_Engine_CSS_Rules_Store::get_store( 'pancakes-with-strawberries' );
 
 		$this->assertInstanceOf( 'WP_Style_Engine_CSS_Rules_Store', $new_pancakes_store );
