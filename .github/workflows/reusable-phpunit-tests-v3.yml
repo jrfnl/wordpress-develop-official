@@ -57,6 +57,18 @@ on:
         required: false
         type: boolean
         default: false
+
+### ADD NEW INPUT: coverage
+
+### NEW INPUT: extensions
+
+### NEW INPUT: ini settings
+
+### Split the test runs running the Xdebug tests off to a separate build under a flag (or maybe use the extensions + coverage flag ?)
+# Xdebug should be off for normal test runs (faster)
+# But is needed for the Xdebug test run + for code coverage
+
+
 env:
   LOCAL_PHP: ${{ inputs.php }}-fpm
   LOCAL_DB_TYPE: ${{ inputs.db-type }}
@@ -162,6 +174,13 @@ jobs:
       - name: Install WordPress
         run: npm run env:install
 
+
+### Think through changing the below to use a group input field instead of having separate steps
+# Consequences:
+# - less guard against incorrect matrix settings
+# - would require more individual builds/jobs
+# - on the upside: would allow more easily to just run the security tests
+
       - name: Run PHPUnit tests
         continue-on-error: ${{ inputs.allow-errors }}
         run: node ./tools/local-env/scripts/docker.js run php ./vendor/bin/phpunit --verbose -c ${{ env.PHPUNIT_CONFIG }}
@@ -180,8 +199,16 @@ jobs:
         continue-on-error: ${{ inputs.allow-errors }}
         run: node ./tools/local-env/scripts/docker.js run php ./vendor/bin/phpunit --verbose -c ${{ env.PHPUNIT_CONFIG }} --group external-http
 
+### There are two more excluded groups which do not have their own run...
+## - ms-required
+## - html-api-html5lib-tests
+## Needs checking if these groups are even useful
+## And if they are, they should get their own group
+
       # __fakegroup__ is excluded to force PHPUnit to ignore the <exclude> settings in phpunit.xml.dist.
       - name: Run (Xdebug) tests
+### CHECK WHY THIS CONDITION EXISTS
+### ALSO: why 8.3 ? and not PHP > 8.2 ?
         if: ${{ inputs.php != '8.3' }}
         continue-on-error: ${{ inputs.allow-errors }}
         run: LOCAL_PHP_XDEBUG=true node ./tools/local-env/scripts/docker.js run php ./vendor/bin/phpunit -v --group xdebug --exclude-group __fakegroup__
